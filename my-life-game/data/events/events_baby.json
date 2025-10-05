@@ -1,0 +1,234 @@
+[
+  {
+    "year": [0],
+    "title": "人生の幕開け",
+    "description": "親戚が出産祝いをくれようとしている．",
+    "options": [
+      {
+        "text": "上目遣いでほしがる",
+        "baseRate": 90,
+        "rateBoost": { "intelligence": 1 },
+        "successEffects": { "money": 2, "points": 1 },
+        "failureEffects": { "money": 1 },
+        "resultText": {
+          "success": "親戚「かわいいね」",
+          "failure": "親戚「きもいね」"
+        }
+      },
+      {
+        "text": "親戚をシバく",
+        "baseRate": 50,
+        "rateBoost": { "stamina": 2 },
+        "successEffects": { "stamina": 10, "intelligence": 10, "sense": 10, "eros": 10, "money": 5000, "points": 13 },
+        "failureEffects": { "stamina": -1 },
+        "resultText": {
+          "success": "親戚をシバいてパワーアップ！いい人生になりそうだ．",
+          "failure": "親戚に返り討ちにあった．"
+        }
+      }
+    ]
+  },
+
+  {
+    "year": [1], "title": "ｵｷﾞｬｵｷﾞｬ！",
+    "description": "おなかがすいた．今日は何を飲もうかな？",
+    "options": [
+      {
+        "text": "ママのおっぱい",
+        "baseRate": 80,
+        "successEffects": { "intelligence": 2, "eros": 1, "points": 1 },
+        "failureEffects": { "stamina": 2, "sense": -1 },
+        "resultText": {
+          "success": "ママのおっぱいんまんま！おっぱい大好き．",
+          "failure": "間違えてパパのおっぱいを飲んでしまった．"
+        }
+      },
+      {
+        "text": "アサヒスーパードライ",
+        "baseRate": 60,
+        "successEffects": { "stamina": 1, "intelligence": 1, "sense": 1, "eros": 1, "points": 1 },
+        "failureEffects": { "intelligence": -1, "sense": 2 },
+        "resultText": {
+          "success": "かーーー！やっぱこれだよなぁ！",
+          "failure": "悪酔いしてしまった．もう酒は飲まねぇ．"
+        }
+      }
+    ]
+  },
+
+  {
+    "year": [3], "title": "お外で遊ぼう！",
+    "description": "お外に遊びに来た．何をして遊ぼうかな？",
+    "options": [
+      {
+        "text": "公園で遊ぶ", "baseRate": 90,
+        "successEffects": { "stamina": 3, "eros": 1, "points": 1 },
+        "failureEffects": { "stamina": 2, "sense": -1 },
+        "resultText": {
+          "success": "遊具で体を動かした！",
+          "failure": "転んでひざを擦りむいた．"
+        }
+      },
+      {
+        "text": "アオカンする", "baseRate": 40,
+        "successEffects": { "stamina": 3, "intelligence": 1, "sense": 1, "eros": 3, "points": 3 },
+        "failureEffects": { "stamina": 2, "sense": -1 },
+        "resultText": {
+          "success": "やっぱ外でするのが一番気持ちいい！",
+          "failure": "警察に見つかって解散．不完全燃焼だ．"
+        }
+      }
+    ]
+  },
+  
+  {
+    "year": [3], "title": "お家で遊ぼう！",
+    "description": "お家で遊ぼう．何をして遊ぼうかな？",
+    "options": [
+      {
+        "text": "ブロックで遊ぶ", "baseRate": 70,
+        "successEffects": { "intelligence": 3, "eros": 1, "points": 1 },
+        "failureEffects": { "intelligence": 2, "stamina": -1 },
+        "resultText": {
+          "success": "かっこいい力作ができた！",
+          "failure": "謎のクソオブジェができあがった．"
+        }
+      },
+      {
+        "text": "オナニーする", "baseRate": 60,
+        "successEffects": { "stamina": 1, "intelligence": 3, "sense": 1, "eros": 3, "points": 3 },
+        "failureEffects": { "intelligence": 2, "stamina": -1 },
+        "resultText": {
+          "success": "いいオナニーができた！賢者に近づいた．",
+          "failure": "オカズ探しに手間取ってるうちにお母さんが来ちゃった．不完全燃焼だ．"
+        }
+      }
+    ]
+  },
+  
+  {
+    "year": [5], "title": "家族で遊ぼう！",
+    "description": "今日は家族でお出かけ！どこに行こう？",
+    "options": [
+      {
+        "text": "遊園地", "baseRate": 60,
+        "successEffects": { "sense": 3, "eros": 1, "points": 1 },
+        "failureEffects": { "intelligence": -1, "sense": 2 },
+        "resultText": {
+          "success": "とびっきりの笑顔で楽しんだ！パパもママもうれしそう．",
+          "failure": "待ち時間のほうが長かった．"
+        }
+      },
+      {
+        "text": "ラブホテル", "baseRate": 50,
+        "successEffects": { "stamina": 1, "intelligence": 1, "sense": 3, "eros": 3, "points": 3 },
+        "failureEffects": { "intelligence": -1, "sense": 2 },
+        "resultText": {
+          "success": "家族で3P！家族愛が深まった．",
+          "failure": "さすがに気まずい．"
+        }
+      }
+    ]
+  },
+  
+  {
+    "year": [2], "title": "ママに怒られる！",
+    "description": "ママの大事なオモチャを壊しちゃった！どうしよう？",
+    "options": [
+      {
+        "text": "素直に謝る", "baseRate": 90,
+        "successEffects": { "intelligence": 4, "eros": 1, "points": 1 },
+        "failureEffects": { "intelligence": -1, "sense": 2 },
+        "resultText": {
+          "success": "褒められた！ママ「ちゃんと謝れて偉いわね！」",
+          "failure": "怒られた！ママ「このクソガキー！！！」"
+        }
+      },
+      {
+        "text": "ママも壊す", "baseRate": 50,
+        "successEffects": { "stamina": 1, "intelligence": 4, "sense": 1, "eros": 4, "points": 4 },
+        "failureEffects": { "intelligence": -1, "sense": 2 },
+        "resultText": {
+          "success": "ママを壊した！パンパンパンパン！ママ「あぁ～～～ん///」",
+          "failure": "ママにわからされた..."
+        }
+      }
+    ]
+  },
+  
+  {
+    "year": [4], "title": "パパに怒られる！",
+    "description": "パパの大事な本を破いちゃった！どうしよう？",
+    "options": [
+      {
+        "text": "素直に謝る", "baseRate": 80,
+        "successEffects": { "stamina": 4, "eros": 1, "points": 1 },
+        "failureEffects": { "stamina": -1, "intelligence": 2 },
+        "resultText": {
+          "success": "褒められた！パパ「ちゃんと謝れて偉いぞ！」",
+          "failure": "怒られた！パパ「俺の涼森れむちゃんを返せー！！！」"
+        }
+      },
+      {
+        "text": "パパも壊す", "baseRate": 60,
+        "successEffects": { "stamina": 4, "intelligence": 1, "sense": 1, "eros": 4, "points": 4 },
+        "failureEffects": { "stamina": -1, "intelligence": 2 },
+        "resultText": {
+          "success": "パパを壊した！パンパンパンパン！パパ「おかしくなっちゃう///」",
+          "failure": "パパにわからされた..."
+        }
+      }
+    ]
+  },
+  
+  {
+    "year": [6], "title": "かわいい女発見！",
+    "description": "街にめちゃくちゃイイ女がいた！どうしよう？",
+    "options": [
+      {
+        "text": "ナンパする", "baseRate": 70,
+        "successEffects": { "sense": 4, "eros": 1, "points": 1 },
+        "failureEffects": { "sense": -1, "stamina": 2 },
+        "resultText": {
+          "success": "うまくいった！お姉さん「かわいー♡」",
+          "failure": "無視された..."
+        }
+      },
+      {
+        "text": "レイプする", "baseRate": 40,
+        "successEffects": { "stamina": 1, "intelligence": 1, "sense": 4, "eros": 4, "points": 4 },
+        "failureEffects": { "sense": -1, "stamina": 2 },
+        "resultText": {
+          "success": "うまくいった！パンパンパンパン！お姉さん「子供ちんぽにイカされちゃう~///」",
+          "failure": "逆に犯された..."
+        }
+      }
+    ]
+  },
+  
+  {
+    "year": [7], "title": "メリークリスマス！",
+    "description": "サンタさんからプレゼントだ！どっちをあける？",
+    "options": [
+      {
+        "text": "小さいプレゼント", "baseRate": 50,
+        "successEffects": { "stamina": 5, "intelligence": 5, "sense": 5, "eros": 5, "points": 5 },
+        "failureEffects": { "stamina": 1, "intelligence": 1, "sense": 1, "eros": 1, "points": 1 },
+        "resultText": {
+          "success": "金の肉棒だ！やったぜ",
+          "failure": "これは小さいプレゼントじゃなくて小さいチンポ..."
+        }
+      },
+      {
+        "text": "大きいプレゼント", "baseRate": 50,
+        "successEffects": { "stamina": 3, "intelligence": 3, "sense": 3, "eros": 3, "points": 3 },
+        "failureEffects": { "stamina": 2, "intelligence": 2, "sense": 2, "eros": 2, "points": 2 },
+        "resultText": {
+          "success": "巨乳だ！やったぜ",
+          "failure": "大きなおじさんが入ってた..."
+        }
+      }
+    ]
+  }
+
+]

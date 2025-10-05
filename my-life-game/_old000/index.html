@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>日本エロい単語学者ゲーム</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game-container">
+    <h1>日本エロい単語学者ゲーム</h1>
+    <p id="current-cycle-time">現在：--年--月</p>
+
+    <div id="login-form">
+      <h2>ログイン</h2>
+      <input type="text" id="login-id" placeholder="IDを入力">
+      <input type="password" id="login-password" placeholder="パスワードを入力">
+      <button onclick="handleLogin()">ログイン</button>
+    </div>
+
+    <div id="status-panel">
+      <h3>現在のステータス</h3>
+      <ul id="status-list"></ul>
+    </div>
+
+    <div id="event-container">
+      <h2 id="event-title">イベントタイトル</h2>
+      <div id="options"></div>
+      <div id="result-log"></div>
+    </div>
+
+    <div id="final-status" style="display: none;">
+      <h2>あなたの人生の記録</h2>
+      <div id="status-summary"></div>
+      <button onclick="promptRankingEntry(playerData)">ランキングに登録する</button>
+    </div>
+
+    <div id="ranking-entry" style="display: none;">
+      <h2>人生の記録を残しましょう</h2>
+      <input type="text" id="player-name" placeholder="表示名を確認・変更できます">
+      <button onclick="submitRanking()">ランキングに登録</button>
+    </div>
+
+    <div id="ranking-container"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,382 @@
+[
+  {
+    "year": [30], "title": "給料日！",
+    "description": "待ちに待った給料日！どうする？",
+    "condition": {"affiliation": "エロい単語学者"},
+    "options": [
+      {
+        "text": "そのままもらう", "baseRate": 75,
+        "successEffects": { "eros": 20, "money": 75 },
+        "failureEffects": { "stamina": 5, "intelligence": 5, "sense": 5, "eros": -10 },
+        "resultText": {
+          "success": "俺様堅実な男！えらい",
+          "failure": "キャバクラでパーッとやったらなくなっちゃった．．．"
+        }
+      },
+      {
+        "text": "競馬で倍にする", "baseRate": 25, "rateBoost": {"eros": 0.08},
+        "successEffects": { "eros": 30, "money": 75 },
+        "failureEffects": { "eros": 1 },
+        "resultText": {
+          "success": "キターーー！ディープ淫パクト！",
+          "failure": "外れた．．．明日からもやし生活"
+        }
+      }
+    ]
+  },
+
+  {
+    "year": [30], "title": "給料日！",
+    "description": "待ちに待った給料日！どうする？",
+    "condition": {"affiliation": "スポーツ選手"},
+    "options": [
+      {
+        "text": "そのままもらう", "baseRate": 75,
+        "successEffects": { "stamina": 20, "money": 100 },
+        "failureEffects": { "stamina": -10, "intelligence": 5, "sense": 5 },
+        "resultText": {
+          "success": "俺様堅実な男！えらい",
+          "failure": "キャバクラでパーッとやったらなくなっちゃった．．．"
+        }
+      },
+      {
+        "text": "競馬で倍にする", "baseRate": 25, "rateBoost": {"stamina": 0.08},
+        "successEffects": { "stamina": 30, "money": 200 },
+        "failureEffects": { "stamina": 1 },
+        "resultText": {
+          "success": "キターーー！ディープ淫パクト！",
+          "failure": "外れた．．．明日からもやし生活"
+        }
+      }
+    ]
+  },
+
+  {
+    "year": [30], "title": "給料日！",
+    "description": "待ちに待った給料日！どうする？",
+    "condition": {"affiliation": "ビジネスマン"},
+    "options": [
+      {
+        "text": "そのままもらう", "baseRate": 75,
+        "successEffects": { "intelligence": 20, "money": 10 },
+        "failureEffects": { "stamina": 5, "intelligence": -10, "sense": 5 },
+        "resultText": {
+          "success": "俺様堅実な男！えらい",
+          "failure": "キャバクラでパーッとやったらなくなっちゃった．．．"
+        }
+      },
+      {
+        "text": "競馬で倍にする", "baseRate": 25, "rateBoost": {"intelligence": 0.08},
+        "successEffects": { "intelligence": 30, "money": 20 },
+        "failureEffects": { "intelligence": 1 },
+        "resultText": {
+          "success": "キターーー！ディープ淫パクト！",
+          "failure": "外れた．．．明日からもやし生活"
+        }
+      }
+    ]
+  },
+
+  {
+    "year": [30], "title": "給料日！",
+    "description": "待ちに待った給料日！どうする？",
+    "condition": {"affiliation": "アーティスト"},
+    "options": [
+      {
+        "text": "そのままもらう", "baseRate": 75,
+        "successEffects": { "sense": 20, "money": 25 },
+        "failureEffects": { "stamina": 5, "intelligence": 5, "sense": -10 },
+        "resultText": {
+          "success": "俺様堅実な男！えらい",
+          "failure": "キャバクラでパーッとやったらなくなっちゃった．．．"
+        }
+      },
+      {
+        "text": "競馬で倍にする", "baseRate": 25, "rateBoost": {"sense": 0.08},
+        "successEffects": { "sense": 30, "money": 50 },
+        "failureEffects": { "sense": 1 },
+        "resultText": {
+          "success": "キターーー！ディープ淫パクト！",
+          "failure": "外れた．．．明日からもやし生活"
+        }
+      }
+    ]
+  },
+
+  {
+    "year": [30], "title": "給料日！",
+    "description": "世間では給料日らしい．．．無職の俺はどうする？",
+    "condition": {"affiliation": "無職"},
+    "options": [
+      {
+        "text": "スポーツ選手のプロテストを受ける", "baseRate": 75,
+        "successEffects": { "stamina": 20, "money": 100, "affiliation": "スポーツ選手" },
+        "failureEffects": { "stamina": -10, "intelligence": 10, "sense": 10, "eros": 10 },
+        "resultText": {
+          "success": "やったー！今日から脱ニート",
+          "failure": "受かるわけないよな．．．"
+        }
+      },
+      {
+        "text": "家でゴロゴロしてる", "baseRate": 90,
+        "successEffects": { "eros": 20, "money": 5 },
+        "failureEffects": { "stamina": 20 },
+        "resultText": {
+          "success": "母ちゃんが5万円くれた！",
+          "failure": "ニート謳歌！．．．むなしいな"
+        }
+      }
+    ]
+  },
+
+  {
+    "year": [31], "title": "結婚！",
+    "description": "今日はプロポーズ！何て伝える？",
+    "options": [
+      {
+        "text": "愛してます！結婚してください！", "baseRate": 90,
+        "successEffects": { "stamina": 20, "intelligence": 20, "sense": 20, "eros": 20 },
+        "failureEffects": { "intelligence": -10 },
+        "resultText": {
+          "success": "彼女「はい、よろしくお願いします///」やったー！！",
+          "failure": "彼女「え？ウチら付き合ってたの？」オワタ，仕方なく彼女の妹と結婚した"
+        }
+      },
+      {
+        "text": "俺のために毎朝マン汁味噌汁を作ってくれないか", "baseRate": 10, "rateBoost": {"eros": 0.08},
+        "successEffects": { "stamina": 30, "intelligence": 30, "sense": 30, "eros": 30 },
+        "failureEffects": { "intelligence": 1 },
+        "resultText": {
+          "success": "やったー！あしたから毎朝マン汁味噌汁が飲める！",
+          "failure": "彼女「バカじゃないの！？バチン！」最悪だ，仕方なくコーンスープと結婚した"
+        }
+      }
+    ]
+  },
+
+  {
+    "year": [32], "title": "読書の秋！",
+    "description": "読書の秋ですな！何を読もう？",
+    "options": [
+      {
+        "text": "純文学", "baseRate": 80,
+        "successEffects": { "intelligence": 15, "eros": 10 },
+        "failureEffects": { "sense": -10 },
+        "resultText": {
+          "success": "ちんぷんかんぷんだったが賢くなった気がする！",
+          "failure": "ちんぷんかんぷんで気絶してしまった．．．"
+        }
+      },
+      {
+        "text": "エロ漫画", "baseRate": 10, "rateBoost": {"intelligence": 0.08},
+        "successEffects": { "intelligence": 30, "eros": 20 },
+        "failureEffects": { "sense": 10 },
+        "resultText": {
+          "success": "ふむふむ．．．やっぱりエロ漫画は文学ですな！",
+          "failure": "ふむふむ．．．だめだ！オナニーばっかりはかどるわ！"
+        }
+      }
+    ]
+  },
+
+  {
+    "year": [33], "title": "競馬！",
+    "description": "今日は日本ダービー！何に賭けよう？",
+    "options": [
+      {
+        "text": "タニノギムレット(1番人気)", "baseRate": 80,
+        "successEffects": { "money": 10 },
+        "failureEffects": { "money": -2 },
+        "resultText": {
+          "success": "やっぱり強かった！武豊最強！",
+          "failure": "大番狂わせの谷間ギムレット．．．信じられない"
+        }
+      },
+      {
+        "text": "谷間ギムレット(18番人気)", "baseRate": 10, "rateBoost": {"eros": 0.08},
+        "successEffects": { "eros": 10, "money": 20 },
+        "failureEffects": { "money": -2 },
+        "resultText": {
+          "success": "キターーー！！信じていたぜ谷間ギムレット！",
+          "failure": "惨敗．．．普通にタニノギムレットにすりゃよかった"
+        }
+      }
+    ]
+  },
+
+  {
+    "year": [34], "title": "メリークリスマス！",
+    "description": "今日はクリスマス！俺もサンタさんプレゼントお願いしよう",
+    "options": [
+      {
+        "text": "家族の幸せ", "baseRate": 70,
+        "successEffects": { "sense": 15, "eros": 10 },
+        "failureEffects": { "stamina": -10 },
+        "resultText": {
+          "success": "家族に幸せが降り注いだ気がする！今日は嫁を抱こう",
+          "failure": "早速嫁が事故った．．．サンタなんかいねーのかよ！"
+        }
+      },
+      {
+        "text": "クリトリス", "baseRate": 0, "rateBoost": {"sense": 0.08},
+        "successEffects": { "sense": 30, "eros": 20 },
+        "failureEffects": { "stamina": 1 },
+        "resultText": {
+          "success": "メリークリトリス！最高のクリスマスだ！",
+          "failure": "ちんちんがクリトリスに変わってしまった．．．"
+        }
+      }
+    ]
+  },
+
+  {
+    "year": [35], "title": "W杯！",
+    "description": "W杯日本代表に選ばれた！ゴール前で敵に囲まれた！",
+    "condition": {"affiliation": "スポーツ選手"},
+    "options": [
+      {
+        "text": "シュートだ！", "baseRate": 10, "rateBoost": {"stamina": 0.08},
+        "successEffects": { "stamina": 40, "eros": 20, "money": 100 },
+        "failureEffects": { "stamina": 1 },
+        "resultText": {
+          "success": "壁をぶち抜いてゴール！日本代表の星や！",
+          "failure": "ゴール失敗．．．日本は予選敗退"
+        }
+      },
+      {
+        "text": "パスだ！", "baseRate": 90,
+        "successEffects": { "stamina": 20, "eros": 10, "money": 50 },
+        "failureEffects": { "stamina": -10 },
+        "resultText": {
+          "success": "チームプレーに貢献してゴール！日本代表のキープレイヤーや！",
+          "failure": "間違えて敵にパスしてしまった．．．チンカスです"
+        }
+      }
+    ]
+  },
+
+  {
+    "year": [35], "title": "W杯！",
+    "description": "W杯だ！どっちに賭ける？",
+    "options": [
+      {
+        "text": "やっぱり日本", "baseRate": 5,
+        "successEffects": { "stamina": 30, "eros": 10, "money": 10 },
+        "failureEffects": { "intelligence": 1, "money": -1 },
+        "resultText": {
+          "success": "こんなことあんのかよ奇跡じゃねーか！",
+          "failure": "当然の結果です．．．"
+        }
+      },
+      {
+        "text": "さすがにドイツ", "baseRate": 95,
+        "successEffects": { "stamina": 20, "eros": 8, "money": 2 },
+        "failureEffects": { "intelligence": -10, "money": -1 },
+        "resultText": {
+          "success": "やったー！ドイツ最強！",
+          "failure": "ありえないだろ．．．最低なW杯"
+        }
+      }
+    ]
+  },
+
+  {
+    "year": [36], "title": "出産！",
+    "description": "わが子が生まれた！名前をつけよう",
+    "options": [
+      {
+        "text": "セブン", "baseRate": 90,
+        "successEffects": { "stamina": 10, "intelligence": 10, "sense": 10, "eros": 10 },
+        "failureEffects": { "sense": 10 },
+        "resultText": {
+          "success": "かっこいい名前だ！俺のようにかっこよく育つんだぞ！",
+          "failure": "名前がかっこよすぎて名前負けしそうだ．．．"
+        }
+      },
+      {
+        "text": "玉竿玉黒丸太ペニペニ棒助ジュニア", "baseRate": 10, "rateBoost": {"eros": 0.08},
+        "successEffects": { "eros": 50 },
+        "failureEffects": { "sense": -10 },
+        "resultText": {
+          "success": "かっこよすぎんだろこの名前！チンポコの神様がつけた名前だ！",
+          "failure": "いじめられないといいな．．．"
+        }
+      }
+    ]
+  },
+
+  {
+    "year": [37], "title": "お買い物！",
+    "description": "車を買おう！どれにする？",
+    "options": [
+      {
+        "text": "フェラーリ", "baseRate": 60,
+        "successEffects": { "stamina": 10, "eros": 10, "money": -100 },
+        "failureEffects": { "stamina": -10, "money": -100 },
+        "resultText": {
+          "success": "かっけー！名前もいいんだよな",
+          "failure": "高すぎる．．．ノリで買うもんじゃないな"
+        }
+      },
+      {
+        "text": "軽トラ", "baseRate": 60,
+        "successEffects": { "stamina": 10, "eros": 10, "money": -10 },
+        "failureEffects": { "stamina": -1, "money": -10 },
+        "resultText": {
+          "success": "やっぱ一番かっけー車は軽トラだよな！",
+          "failure": "フェラーリ乗れる人生がよかった．．．"
+        }
+      }
+    ]
+  },
+
+  {
+    "year": [38], "title": "花粉症！",
+    "description": "ハックション！花粉症がキツい",
+    "options": [
+      {
+        "text": "鼻水をかむ", "baseRate": 80,
+        "successEffects": { "intelligence": 20, "eros": 10 },
+        "failureEffects": { "intelligence": -1 },
+        "resultText": {
+          "success": "ちーーーん！スッキリした！",
+          "failure": "かんでもかんでも鼻水が止まらない．．．"
+        }
+      },
+      {
+        "text": "シコる", "baseRate": 10, "rateBoost": {"eros": 0.08},
+        "successEffects": { "intelligence": 40, "eros": 15 },
+        "failureEffects": { "intelligence": -10, "eros": 1 },
+        "resultText": {
+          "success": "鼻水を超えた射精量！花粉症も吹き飛んだぜ！",
+          "failure": "賢者タイムに気付いたが，花粉症とオナニーは関係なかった．．．"
+        }
+      }
+    ]
+  },
+
+  {
+    "year": [39], "title": "夏祭り！",
+    "description": "今日は夏祭り！何を食べよう？",
+    "options": [
+      {
+        "text": "かき氷", "baseRate": 0, "rateBoost": {"intelligence": 0.08},
+        "successEffects": { "stamina": 15, "sense": 15, "eros": 5 },
+        "failureEffects": { "intelligence": 30 },
+        "resultText": {
+          "success": "おお！これは幻のザーメン練乳入りかき氷！",
+          "failure": "頭キーーーン！"
+        }
+      },
+      {
+        "text": "焼きそば", "baseRate": 0, "rateBoost": {"stamina": 0.08},
+        "successEffects": { "intelligence": 15, "sense": 15, "eros": 5 },
+        "failureEffects": { "stamina": 30 },
+        "resultText": {
+          "success": "おお！これは幻の陰毛ソース焼きそば！",
+          "failure": "カップ焼きそばのほうがウマイ．．．"
+        }
+      }
+    ]
+  }
+]
