@@ -213,6 +213,7 @@ function doSingleEvent(playerData) {
 // ゲーム開始処理
 window.onload = () => {
   const id = localStorage.getItem("currentUser");
+  console.log("id: ", id)
   const playerData = loadPlayerData(id);
   console.log("joinedCycle:", playerData.joinedCycle);
 
@@ -248,3 +249,4 @@ window.onload = () => {
     };
   }
 }
+
