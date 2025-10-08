@@ -224,7 +224,6 @@ window.onload = () => {
   
   console.log("joinedCycle:", playerData.joinedCycle);
 
-  //playerData = data;
   playerData.localYear = playerData.localYear ?? 0;
 
   document.getElementById("event-container").style.display = "block";
