@@ -7,7 +7,8 @@ import { getDatabase, ref, set, get } from "https://www.gstatic.com/firebasejs/1
 const firebaseConfig = {
   apiKey: "AIzaSyB4RoOn-ZMaMwuO8HPBinXotS4Vq661Y0I",
   authDomain: "jetg-game.firebaseapp.com",
-  databaseURL: "https://jetg-game.firebaseio.com",
+  databaseURL: " https://jetg-game-default-rtdb.firebaseio.com",
+  //databaseURL: "https://jetg-game.firebaseio.com",
   projectId: "jetg-game",
   storageBucket: "jetg-game.firebasestorage.app",
   messagingSenderId: "150459389281",
