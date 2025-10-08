@@ -18,3 +18,4 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 window.db = getDatabase(app);
 //export const db = getDatabase(app);
+window.ref = ref;
