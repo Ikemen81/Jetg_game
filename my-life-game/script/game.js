@@ -213,16 +213,16 @@ function doSingleEvent(playerData) {
 // ゲーム開始処理
 window.onload = () => {
   const id = localStorage.getItem("currentUser");
-  console.log("id: ", id)
   const playerData = loadPlayerData(id);
-  console.log("joinedCycle:", playerData.joinedCycle);
-
+  
   //ログイン情報がないなら
   if (!playerData || !id) {
     alert("キャラクターが登録されていません。キャラクター登録ページへ移動します。");
     window.location.href = "register.html";
     return;
   }
+  
+  console.log("joinedCycle:", playerData.joinedCycle);
 
   //playerData = data;
   playerData.localYear = playerData.localYear ?? 0;
@@ -249,4 +249,3 @@ window.onload = () => {
     };
   }
 }
-
