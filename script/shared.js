@@ -13,7 +13,8 @@ async function getUsers() {
   if (snapshot.exists()) {
     const users = snapshot.val();
     // usernameだけの一覧を抽出
-    return Object.values(users).map(user => user.username);
+    return Object.keys(users); // → ["seven02"]
+    //return Object.values(users).map(user => user.username);
   } else {
     return []; // ユーザーがいない場合は空配列
   }
