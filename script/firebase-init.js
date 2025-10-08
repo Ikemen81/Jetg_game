@@ -16,4 +16,5 @@ const firebaseConfig = {
 
 // 初期化と同時に db を取得
 const app = initializeApp(firebaseConfig);
-export const db = getDatabase(app);
+window.db = getDatabase(app);
+//export const db = getDatabase(app);
