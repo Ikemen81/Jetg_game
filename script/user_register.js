@@ -1,6 +1,6 @@
 //import { saveUser } from "./shared";
 
-document.getElementById("register-form").onsubmit = function(e) {
+document.getElementById("register-form").onsubmit = async function(e) {
   e.preventDefault();
   const username = document.getElementById("username").value.trim();
   const password = document.getElementById("password").value;
@@ -19,19 +19,12 @@ document.getElementById("register-form").onsubmit = function(e) {
   }
 
   //const users = getUsers();
-  const existingUsernames = getUsers();
+  const existingUsernames = await getUsers();
   if (existingUsernames.includes(username)) {
     errorMsg.textContent = "このユーザー名は既に使われています。";
     return;
   }
-  /*if (users.some(u => u.username === username)) {
-    errorMsg.textContent = "このユーザー名は既に使われています。";
-    return;
-  }*/
 
-  // 登録
-  //users.push({ username, password });
-  //saveUsers(users);
   saveUser(username, password)
 
   alert("登録が完了しました！");

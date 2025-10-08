@@ -2,7 +2,7 @@
 
 // firebase-init.js
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
-import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-database.js";
+import { getDatabase, ref, set, get } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-database.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyB4RoOn-ZMaMwuO8HPBinXotS4Vq661Y0I",
@@ -20,3 +20,4 @@ window.db = getDatabase(app);
 //export const db = getDatabase(app);
 window.ref = ref;
 window.set = set;
+window.get = get;
