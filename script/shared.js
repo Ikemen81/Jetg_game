@@ -7,6 +7,7 @@ let playerData;
 //2025108 firebase対応
 //20250922 ユーザー名対応
 export async function getUsers() {
+//export async function getUsers() {
   const snapshot = await get(ref(window.db, "users"));
 
   if (snapshot.exists()) {
