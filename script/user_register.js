@@ -18,11 +18,16 @@ document.getElementById("register-form").onsubmit = function(e) {
     return;
   }
 
-  const users = getUsers();
-  if (users.some(u => u.username === username)) {
+  //const users = getUsers();
+  const existingUsernames = getUsers();
+  if (existingUsernames.includes(username)) {
     errorMsg.textContent = "このユーザー名は既に使われています。";
     return;
   }
+  /*if (users.some(u => u.username === username)) {
+    errorMsg.textContent = "このユーザー名は既に使われています。";
+    return;
+  }*/
 
   // 登録
   //users.push({ username, password });

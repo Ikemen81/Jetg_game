@@ -4,10 +4,22 @@ let playerData;
 //const maxYear = 100;
 //const maxYear = 15;
 
+//2025108 firebase対応
 //20250922 ユーザー名対応
-function getUsers() {
-  return JSON.parse(localStorage.getItem("users") || "[]");
+export async function getUsers() {
+  const snapshot = await get(ref(window.db, "users"));
+
+  if (snapshot.exists()) {
+    const users = snapshot.val();
+    // usernameだけの一覧を抽出
+    return Object.values(users).map(user => user.username);
+  } else {
+    return []; // ユーザーがいない場合は空配列
+  }
 }
+/*function getUsers() {
+  //return JSON.parse(localStorage.getItem("users") || "[]");
+}*/
 
 //20251008 firebase対応
 function saveUser(username, password) {
