@@ -8,7 +8,20 @@ let playerData;
 function getUsers() {
   return JSON.parse(localStorage.getItem("users") || "[]");
 }
-function saveUsers(users) {
+
+//20251008 firebase対応
+export function saveUser(username, password) {
+  const ref = db.ref(`users/${username}`);
+  ref.set({ password })
+    .then(() => {
+      console.log("ユーザーを保存しました");
+    })
+    .catch(error => {
+      console.error("保存エラー:", error);
+    });
+}
+
+/*function saveUsers(users) {
   localStorage.setItem("users", JSON.stringify(users));
 }
 
@@ -17,7 +30,7 @@ const gameConfig = {
   endAge: 89,
   maxYears: 10, // endAge - startAge + 1
   startAffil: "エロい単語学者",
-};
+};*/
 
 function loadPlayerData(id) {
   const raw = localStorage.getItem(`player_${id}`);

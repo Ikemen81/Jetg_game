@@ -1,9 +1,4 @@
-/*function getUsers() {
-  return JSON.parse(localStorage.getItem("users") || "[]");
-}
-function saveUsers(users) {
-  localStorage.setItem("users", JSON.stringify(users));
-}*/
+import { saveUser } from "./shared";
 
 document.getElementById("register-form").onsubmit = function(e) {
   e.preventDefault();
@@ -30,8 +25,9 @@ document.getElementById("register-form").onsubmit = function(e) {
   }
 
   // 登録
-  users.push({ username, password });
-  saveUsers(users);
+  //users.push({ username, password });
+  //saveUsers(users);
+  saveUser(username, password)
 
   alert("登録が完了しました！");
   window.location.href = "login.html";
