@@ -14,7 +14,7 @@ function saveUser(username, password) {
 //export function saveUser(username, password) {
   const ref = window.ref(window.db, `users/${username}`);
   //const ref = window.db.ref(`users/${username}`);
-  ref.set({ password })
+  set(ref, { password })
     .then(() => {
       console.log("ユーザーを保存しました");
     })
