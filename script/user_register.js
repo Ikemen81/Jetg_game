@@ -1,4 +1,4 @@
-import { saveUser } from "./shared";
+//import { saveUser } from "./shared";
 
 document.getElementById("register-form").onsubmit = function(e) {
   e.preventDefault();
