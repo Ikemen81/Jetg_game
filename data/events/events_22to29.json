@@ -1,0 +1,219 @@
+[
+  {
+    "year": [22], "title": "就職！",
+    "description": "俺も就職だ！目指すは．．．",
+    "options": [
+      {
+        "text": "エロい単語学者", "baseRate": 0, "rateBoost": {"eros": 0.09},
+        "successEffects": { "stamina": 7, "intelligence": 7, "sense": 7, "eros": 13, "money": 10, "affiliation": "エロい単語学者" },
+        "failureEffects": { "eros": 1, "affiliation": "無職" },
+        "resultText": {
+          "success": "やったー！誰もがうらやむエロい単語学者だ！",
+          "failure": "無職になっちゃった．．．"
+        }
+      },
+      {
+        "text": "スポーツ選手", "baseRate": 50, "rateBoost": {"stamina": 0.09},
+        "successEffects": { "stamina": 13, "eros": 2, "money": 5, "affiliation": "スポーツ選手" },
+        "failureEffects": { "stamina": 10, "affiliation": "無職" },
+        "resultText": {
+          "success": "よし！スポーツ選手として頑張ろう！",
+          "failure": "無職になっちゃった．．．"
+        }
+      },
+      {
+        "text": "ビジネスマン", "baseRate": 50, "rateBoost": {"intelligence": 0.09},
+        "successEffects": { "intelligence": 13, "eros": 2, "money": 5, "affiliation": "ビジネスマン" },
+        "failureEffects": { "intelligence": 10, "affiliation": "無職" },
+        "resultText": {
+          "success": "よし！ビジネスマンとして頑張ろう！",
+          "failure": "無職になっちゃった．．．"
+        }
+      },
+      {
+        "text": "アーティスト", "baseRate": 50, "rateBoost": {"sense": 0.09},
+        "successEffects": { "sense": 13, "eros": 2, "money": 5, "affiliation": "アーティスト" },
+        "failureEffects": { "sense": 10, "affiliation": "無職" },
+        "resultText": {
+          "success": "よし！アーティストとして頑張ろう！",
+          "failure": "無職になっちゃった．．．"
+        }
+      }
+    ]
+  },
+  
+  {
+    "year": [23], "title": "お花見！",
+    "description": "今日はお花見！何を買う？",
+    "options": [
+      {
+        "text": "たこ焼き", "baseRate": 90,
+        "successEffects": { "intelligence": 10, "sense": 10, "eros": 10 },
+        "failureEffects": { "stamina": -10 },
+        "resultText": {
+          "success": "ほかほかウマイ！",
+          "failure": "ウマイ！．．．ってよく見たらこれ金玉やんけ！"
+        }
+      },
+      {
+        "text": "女", "baseRate": 10, "rateBoost": {"stamina": 0.09},
+        "successEffects": { "intelligence": 20, "sense": 20, "eros": 20, "money": -1 },
+        "failureEffects": { "stamina": 10, "money": -1 },
+        "resultText": {
+          "success": "やっぱ花よりマンコやな！！",
+          "failure": "80歳のおばあちゃん．．．一応抱くけど"
+        }
+      }
+    ]
+  },
+  
+  {
+    "year": [24], "title": "おデート！",
+    "description": "好きな女とデート！どこにいこう？",
+    "options": [
+      {
+        "text": "遊園地", "baseRate": 80,
+        "successEffects": { "intelligence": 10, "eros": 11 },
+        "failureEffects": { "stamina": 10 },
+        "resultText": {
+          "success": "一気に距離が縮まった！俺の股間がジェットコースターや",
+          "failure": "歩き疲れて疲れマラ．．．"
+        }
+      },
+      {
+        "text": "水族館", "baseRate": 0, "rateBoost": {"eros": 0.09},
+        "successEffects": { "intelligence": 30, "eros": 10 },
+        "failureEffects": { "stamina": 10 },
+        "resultText": {
+          "success": "一気に距離が縮まった！君の膣を泳ぎたい",
+          "failure": "水を見るとどうもムラムラしてしまって心ここにあらずだった．．．"
+        }
+      }
+    ]
+  },
+  
+  {
+    "year": [25], "title": "初詣！",
+    "description": "あけおめ！お賽銭はいくらにしよう？",
+    "options": [
+      {
+        "text": "5円", "baseRate": 10, "rateBoost": {"intelligence": 0.09},
+        "successEffects": { "stamina": 20, "sense": 20, "eros": 20, "money": -5 },
+        "failureEffects": { "intelligence": 10, "money": -5 },
+        "resultText": {
+          "success": "ご縁がありますように．．．って女神様がご奉仕ペロペロ！いいご縁",
+          "failure": "ご縁がありますように．．．ってババアがこっちに走ってくる！嫌なご縁"
+        }
+      },
+      {
+        "text": "10000円", "baseRate": 90,
+        "successEffects": { "stamina": 10, "sense": 10, "eros": 10, "money": 4 },
+        "failureEffects": { "intelligence": -10, "money": -1 },
+        "resultText": {
+          "success": "神様「お前太っ腹やん！気に入った！」神様からお年玉5万円もらった！",
+          "failure": "いいことありますように．．．何もなかった"
+        }
+      }
+    ]
+  },
+  
+  {
+    "year": [26], "title": "告白！",
+    "description": "好きな女に告白！緊張するけどなんて言おう？",
+    "options": [
+      {
+        "text": "好きです！付き合ってください！", "baseRate": 70,
+        "successEffects": { "sense": 10, "eros": 11 },
+        "failureEffects": { "intelligence": 10 },
+        "resultText": {
+          "success": "「よろしくお願いします///」やったー！！",
+          "failure": "「よろちくおねがいちまちゅ///」間違えて10歳の妹に告白してしまった．．．"
+        }
+      },
+      {
+        "text": "俺のデカマラで君のマンスープをかき混ぜたい", "baseRate": 0, "rateBoost": {"eros": 0.09},
+        "successEffects": { "sense": 30, "eros": 10 },
+        "failureEffects": { "intelligence": 10 },
+        "resultText": {
+          "success": "「よろしくお願いします///」やったー！！",
+          "failure": "「コトコト．．．(よろしくお願いします///)」間違えてコーンスープに告白してしまった．．．"
+        }
+      }
+    ]
+  },
+  
+  {
+    "year": [27], "title": "海水浴！",
+    "description": "真夏の海だ！何をしよう？",
+    "options": [
+      {
+        "text": "スイカ割り", "baseRate": 90,
+        "successEffects": { "stamina": 10, "intelligence": 10, "eros": 10 },
+        "failureEffects": { "sense": -10, "money": -1 },
+        "resultText": {
+          "success": "エイッ！なんと割れたのはスイカではなく女の股だった！",
+          "failure": "エイッ！って知らないオッサンを割ってしまって罰金．．．"
+        }
+      },
+      {
+        "text": "ナンパ", "baseRate": 10, "rateBoost": {"sense": 0.09},
+        "successEffects": { "stamina": 20, "intelligence": 20, "eros": 20 },
+        "failureEffects": { "sense": 10, "money": -1 },
+        "resultText": {
+          "success": "大成功！水着ギャルは夏の風物詩や！",
+          "failure": "大成功！と思ったら未成年だったことが発覚し警察のお世話になった．．．"
+        }
+      }
+    ]
+  },
+  
+  {
+    "year": [28], "title": "おデート！",
+    "description": "彼女とおデート！どこに行く？",
+    "options": [
+      {
+        "text": "公園", "baseRate": 60,
+        "successEffects": { "stamina": 10, "eros": 11 },
+        "failureEffects": { "sense": 10 },
+        "resultText": {
+          "success": "アオカンに成功！変態の恋人で幸せだ",
+          "failure": "「アオカン！？馬鹿じゃないの！」怒られてしまった．．．"
+        }
+      },
+      {
+        "text": "ラブホテル", "baseRate": 0, "rateBoost": {"eros": 0.09},
+        "successEffects": { "stamina": 30, "eros": 10 },
+        "failureEffects": { "sense": 10 },
+        "resultText": {
+          "success": "直ラブホOK話が早くてイイ女や！",
+          "failure": "「ヤることしか頭にないの！？馬鹿じゃないの！」怒られてしまった．．．"
+        }
+      }
+    ]
+  },
+  
+  {
+    "year": [29], "title": "競馬！",
+    "description": "今日は皐月賞！何に賭けよう？",
+    "options": [
+      {
+        "text": "ディープインパクト(1番人気)", "baseRate": 80,
+        "successEffects": { "money": 5 },
+        "failureEffects": { "money": -1 },
+        "resultText": {
+          "success": "やっぱり強かった！日本近代競馬の結晶！",
+          "failure": "大番狂わせのディープ淫パクト．．．信じられない"
+        }
+      },
+      {
+        "text": "ディープ淫パクト(18番人気)", "baseRate": 10, "rateBoost": {"eros": 0.09},
+        "successEffects": { "eros": 5, "money": 10 },
+        "failureEffects": { "money": -1 },
+        "resultText": {
+          "success": "キターーー！！信じていたぜディープ淫パクト！",
+          "failure": "惨敗．．．普通にディープインパクトにすりゃよかった"
+        }
+      }
+    ]
+  }
+]

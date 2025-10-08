@@ -1,0 +1,382 @@
+[
+  {
+    "year": [40], "title": "給料日！",
+    "description": "待ちに待った給料日！どうする？",
+    "condition": {"affiliation": "エロい単語学者"},
+    "options": [
+      {
+        "text": "そのままもらう", "baseRate": 75,
+        "successEffects": { "eros": 30, "money": 75 },
+        "failureEffects": { "stamina": 10, "intelligence": 10, "sense": 10, "eros": -10 },
+        "resultText": {
+          "success": "俺様堅実な男！えらい",
+          "failure": "キャバクラでパーッとやったらなくなっちゃった．．．"
+        }
+      },
+      {
+        "text": "競馬で倍にする", "baseRate": 25, "rateBoost": {"eros": 0.07},
+        "successEffects": { "eros": 50, "money": 150 },
+        "failureEffects": { "eros": 1 },
+        "resultText": {
+          "success": "キターーー！谷間ギムレット！",
+          "failure": "外れた．．．明日からもやし生活"
+        }
+      }
+    ]
+  },
+
+  {
+    "year": [40], "title": "人生の岐路！",
+    "description": "年齢的に苦しくなってきた！どうする？",
+    "condition": {"affiliation": "スポーツ選手"},
+    "options": [
+      {
+        "text": "もう少し頑張る", "baseRate": 75,
+        "successEffects": { "stamina": 30, "money": 75 },
+        "failureEffects": { "stamina": -10, "intelligence": 5, "sense": 5, "money": 1 },
+        "resultText": {
+          "success": "まだまだやれることを示した！俺のバットはカチカチだぜ",
+          "failure": "すがりついたはいいものの．．．大幅減給"
+        }
+      },
+      {
+        "text": "転職する", "baseRate": 25, "rateBoost": {"stamina": 0.07},
+        "successEffects": { "eros": 30, "money": 150, "affiliation": "エロい単語学者" },
+        "failureEffects": { "stamina": 1, "affiliation": "無職" },
+        "resultText": {
+          "success": "エロい単語学者にキャリアアップ！",
+          "failure": "無職になっちゃった．．．明日からどうしよう"
+        }
+      }
+    ]
+  },
+
+  {
+    "year": [40], "title": "給料日！",
+    "description": "待ちに待った給料日！どうする？",
+    "condition": {"affiliation": "ビジネスマン"},
+    "options": [
+      {
+        "text": "そのままもらう", "baseRate": 75,
+        "successEffects": { "intelligence": 30, "money": 25 },
+        "failureEffects": { "stamina": 10, "intelligence": -20, "sense": 10 },
+        "resultText": {
+          "success": "俺様堅実な男！えらい",
+          "failure": "キャバクラでパーッとやったらなくなっちゃった．．．"
+        }
+      },
+      {
+        "text": "競馬で倍にする", "baseRate": 25, "rateBoost": {"intelligence": 0.07},
+        "successEffects": { "intelligence": 50, "money": 50 },
+        "failureEffects": { "intelligence": 1 },
+        "resultText": {
+          "success": "キターーー！谷間ギムレット！",
+          "failure": "外れた．．．明日からもやし生活"
+        }
+      }
+    ]
+  },
+
+  {
+    "year": [40], "title": "給料日！",
+    "description": "待ちに待った給料日！どうする？",
+    "condition": {"affiliation": "アーティスト"},
+    "options": [
+      {
+        "text": "そのままもらう", "baseRate": 75,
+        "successEffects": { "sense": 30, "money": 75 },
+        "failureEffects": { "stamina": 10, "intelligence": 10, "sense": -20 },
+        "resultText": {
+          "success": "俺様堅実な男！えらい",
+          "failure": "キャバクラでパーッとやったらなくなっちゃった．．．"
+        }
+      },
+      {
+        "text": "競馬で倍にする", "baseRate": 25, "rateBoost": {"sense": 0.07},
+        "successEffects": { "sense": 50, "money": 150 },
+        "failureEffects": { "sense": 1 },
+        "resultText": {
+          "success": "キターーー！谷間ギムレット！",
+          "failure": "外れた．．．明日からもやし生活"
+        }
+      }
+    ]
+  },
+
+  {
+    "year": [40], "title": "給料日！",
+    "description": "世間では給料日らしい．．．無職の俺はどうする？",
+    "condition": {"affiliation": "無職"},
+    "options": [
+      {
+        "text": "絵を描いて発表してみる", "baseRate": 75,
+        "successEffects": { "sense": 30, "money": 75, "affiliation": "アーティスト" },
+        "failureEffects": { "stamina": 20, "intelligence": 20, "sense": -20, "eros": 20 },
+        "resultText": {
+          "success": "やったー！今日から脱ニート",
+          "failure": "ウケるわけないよな．．．"
+        }
+      },
+      {
+        "text": "家でゴロゴロしてる", "baseRate": 90,
+        "successEffects": { "eros": 40, "money": 5 },
+        "failureEffects": { "sense": 30 },
+        "resultText": {
+          "success": "母ちゃんが5万円くれた！",
+          "failure": "ニート謳歌！．．．むなしいな"
+        }
+      }
+    ]
+  },
+
+  {
+    "year": [41], "title": "不倫！",
+    "description": "不倫がバレた！どうする？",
+    "options": [
+      {
+        "text": "誠実に謝る", "baseRate": 80,
+        "successEffects": { "stamina": 25, "intelligence": 25, "sense": 25, "eros": 25 },
+        "failureEffects": { "sense": -15, "money": -20 },
+        "resultText": {
+          "success": "嫁「次はないわよ，やっぱりあなたが好きだから///」やったー！！",
+          "failure": "嫁「テメェ許せるわけねーだろタコこら！」オワタ，慰謝料を払う羽目に．．．"
+        }
+      },
+      {
+        "text": "エッチする", "baseRate": 10, "rateBoost": {"eros": 0.07},
+        "successEffects": { "stamina": 35, "intelligence": 35, "sense": 35, "eros": 35 },
+        "failureEffects": { "sense": 3, "money": -10 },
+        "resultText": {
+          "success": "膣で黙らせた！「アァン！やっぱりこのオチンポからは離れられないわ///」",
+          "failure": "よめ「バカじゃないの！？バチン！」最悪だ，仕方なく慰謝料を払う羽目に．．．"
+        }
+      }
+    ]
+  },
+
+  {
+    "year": [42], "title": "子供が小学生！",
+    "description": "子供の小学校の入学式！子供の様子は？",
+    "options": [
+      {
+        "text": "背筋を伸ばして立派に参加している", "baseRate": 50,
+        "successEffects": { "sense": 20, "eros": 10 },
+        "failureEffects": { "stamina": -10 },
+        "resultText": {
+          "success": "さすが我が息子！チンポの方も立派にな！",
+          "failure": "気絶しているだけだった．．．"
+        }
+      },
+      {
+        "text": "ズボンにテントを張って参加している", "baseRate": 10, "rateBoost": {"intelligence": 0.07},
+        "successEffects": { "sense": 40, "eros": 20 },
+        "failureEffects": { "stamina": 3 },
+        "resultText": {
+          "success": "周りの女子が釘付けだ！いいぞ！かっこいいぞ！",
+          "failure": "周りの女子がドン引きだ．．．悪いぞ！かっこわるいぞ！"
+        }
+      }
+    ]
+  },
+
+  {
+    "year": [43], "title": "競馬！",
+    "description": "今日は菊花賞！何に賭けよう？",
+    "options": [
+      {
+        "text": "セイウンスカイ(1番人気)", "baseRate": 70,
+        "successEffects": { "money": 20 },
+        "failureEffects": { "money": -4 },
+        "resultText": {
+          "success": "やっぱり強かった！ノリさんかっこいい！",
+          "failure": "大番狂わせの性うんこスカトロい．．．信じられない"
+        }
+      },
+      {
+        "text": "性うんこスカトロい(18番人気)", "baseRate": 10, "rateBoost": {"eros": 0.07},
+        "successEffects": { "eros": 10, "money": 40 },
+        "failureEffects": { "money": -4 },
+        "resultText": {
+          "success": "キターーー！！信じていたぜ性うんこスカトロい！",
+          "failure": "惨敗．．．普通にセイウンスカイにすりゃよかった"
+        }
+      }
+    ]
+  },
+
+  {
+    "year": [44], "title": "サクラサク！",
+    "description": "桜が満開だ！どうする？",
+    "options": [
+      {
+        "text": "家族でお花見", "baseRate": 60,
+        "successEffects": { "stamina": 20, "eros": 10 },
+        "failureEffects": { "intelligence": -10 },
+        "resultText": {
+          "success": "家族でお花見を楽しんだ！これが幸せってやつか",
+          "failure": "反抗期の息子が不機嫌で最悪だった．．．"
+        }
+      },
+      {
+        "text": "シコる", "baseRate": 0, "rateBoost": {"sense": 0.07},
+        "successEffects": { "stamina": 35, "eros": 20 },
+        "failureEffects": { "intelligence": 3 },
+        "resultText": {
+          "success": "趣でシコる！最高だぜ！",
+          "failure": "舞い落ちる花弁が尿道に入り込んで激痛．．．"
+        }
+      }
+    ]
+  },
+
+  {
+    "year": [45], "title": "Mステ出演！",
+    "description": "夢のMステ出演だ！どんなパフォーマンスをする？",
+    "condition": {"affiliation": "アーティスト"},
+    "options": [
+      {
+        "text": "アレンジ効かせまくり", "baseRate": 10, "rateBoost": {"sense": 0.07},
+        "successEffects": { "sense": 45, "eros": 20, "money": 100 },
+        "failureEffects": { "sense": 3 },
+        "resultText": {
+          "success": "大成功！観客総立ちで俺のチンポコも総立ちや！",
+          "failure": "いらぬアレンジをするなと大ブーイング．．．チンカスです"
+        }
+      },
+      {
+        "text": "音源に忠実に", "baseRate": 90,
+        "successEffects": { "sense": 25, "eros": 20, "money": 50 },
+        "failureEffects": { "sense": -10 },
+        "resultText": {
+          "success": "音源並みの生歌で大成功！",
+          "failure": "うますぎて口パク疑惑．．．世間は分からん"
+        }
+      }
+    ]
+  },
+
+  {
+    "year": [45], "title": "Mステ観覧！",
+    "description": "Mステを見に来た！歌が下手すぎるけどどうする？",
+    "options": [
+      {
+        "text": "空き缶を投げる", "baseRate": 50,
+        "successEffects": { "sense": 20 },
+        "failureEffects": { "sense": 1 },
+        "resultText": {
+          "success": "観客総意で空き缶を投げつけて大盛り上がり！",
+          "failure": "ファンからボコられた．．．"
+        }
+      },
+      {
+        "text": "ザーメンをかける", "baseRate": 50,
+        "successEffects": { "sense": 20, "eros": 10 },
+        "failureEffects": { "sense": -20, "money": -5 },
+        "resultText": {
+          "success": "アイドルグループ全員が俺のザーメンを浴びて大喜び！",
+          "failure": "普通につかまって罰金取られた．．．"
+        }
+      }
+    ]
+  },
+
+  {
+    "year": [46], "title": "虫取り！",
+    "description": "子供と虫取りに来た！何を狙う？",
+    "options": [
+      {
+        "text": "カブトムシ", "baseRate": 70,
+        "successEffects": { "stamina": 30, "eros": 10 },
+        "failureEffects": { "stamina": -10 },
+        "resultText": {
+          "success": "昆虫界の王様ゲット！息子のツノも立派に育て！",
+          "failure": "間違えてゴキブリを捕まえた．．．疲れた"
+        }
+      },
+      {
+        "text": "ギラファノコギリクワガタ", "baseRate": 30,
+        "successEffects": { "stamina": 40, "eros": 20 },
+        "failureEffects": { "stamina": 10 },
+        "resultText": {
+          "success": "かっこよすぎんだろこの虫！俺のツノも二股なら3Pも簡単なのにな！",
+          "failure": "いるわけなかった．．．息子に見栄を張るためノコギリをギラファと言い張った"
+        }
+      }
+    ]
+  },
+
+  {
+    "year": [47], "title": "お買い物！",
+    "description": "家を買おう！どれにする？",
+    "options": [
+      {
+        "text": "かっけータワマン", "baseRate": 50, "rateBoost": {"intelligence": 0.07},
+        "successEffects": { "intelligence": 50, "eros": 100, "money": -1000 },
+        "failureEffects": { "intelligence": -10, "money": -2000 },
+        "resultText": {
+          "success": "かっけー！やっぱタワマンは最高だぜ！(ワインくるくる)",
+          "failure": "買った瞬間に崩壊．．．人生も崩壊"
+        }
+      },
+      {
+        "text": "ビニールハウス", "baseRate": 60,
+        "successEffects": { "intelligence": 25, "eros": 25, "money": -10 },
+        "failureEffects": { "intelligence": 5, "money": -10 },
+        "resultText": {
+          "success": "やっぱ日当たりのいい家が最高だよな！",
+          "failure": "外から丸見え．．．センズリできんやんけぇ！"
+        }
+      }
+    ]
+  },
+
+  {
+    "year": [48], "title": "子供が中学生！",
+    "description": "子供の中学校の入学式！子供の様子は？",
+    "options": [
+      {
+        "text": "群を抜いたオーラを放っている", "baseRate": 70,
+        "successEffects": { "stamina": 20, "intelligence": 20, "eros": 10 },
+        "failureEffects": { "intelligence": 10, "sense": 20 },
+        "resultText": {
+          "success": "うちの子が一番かっこいい！チンポも立派に育て！",
+          "failure": "放っていたのは小便だった．．．親の顔が見てみたい"
+        }
+      },
+      {
+        "text": "横の女子ともぞもぞしている", "baseRate": 10, "rateBoost": {"eros": 0.07},
+        "successEffects": { "stamina": 30, "sense": 30, "eros": 15 },
+        "failureEffects": { "stamina": 20, "intelligence": 30, "eros": 3 },
+        "resultText": {
+          "success": "おいおい入学初日から手マンかよ！将来が楽しみだぜ！",
+          "failure": "ヤろうとして拒絶されてる．．．初日から恥ずかしいぞ"
+        }
+      }
+    ]
+  },
+
+  {
+    "year": [49], "title": "スポーツの秋！",
+    "description": "秋と言ったらスポーツやな！何をしよう？",
+    "options": [
+      {
+        "text": "テニス", "baseRate": 0, "rateBoost": {"sense": 0.07},
+        "successEffects": { "stamina": 20, "intelligence": 20, "eros": 10 },
+        "failureEffects": { "intelligence": 45 },
+        "resultText": {
+          "success": "嫁よ！それはテニスやない，ペニスや！！きもちい～～～",
+          "failure": "経験者の嫁にボコされた．．．帰って寝よう"
+        }
+      },
+      {
+        "text": "セックス", "baseRate": 0, "rateBoost": {"eros": 0.07},
+        "successEffects": { "stamina": 20, "intelligence": 20, "sense": 20, "eros": 1 },
+        "failureEffects": { "eros": 45 },
+        "resultText": {
+          "success": "やっぱり一番気持ちいいスポーツやな！ぱんぱんぱん",
+          "failure": "最近ED気味でイけなかった．．．情けないです"
+        }
+      }
+    ]
+  }
+]

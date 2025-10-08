@@ -1,0 +1,134 @@
+[
+  {
+    "month": [0, 12, 24, 36, 48],
+    "title": "あけましておめでとう！",
+    "description": "新年の幕開けだ．親戚がお年玉をくれようとしている．",
+    "options": [
+      {
+        "text": "上目遣いでお年玉をほしがる",
+        "baseRate": 90,
+        "rateBoost": { "intelligence": 1 },
+        "successEffects": { "money": 10000, "points": 1 },
+        "failureEffects": { "money": 5000 },
+        "resultText": {
+          "success": "親戚「かわいいね」",
+          "failure": "親戚「きもいね」"
+        }
+      },
+      {
+        "text": "親戚をシバく",
+        "baseRate": 50,
+        "rateBoost": { "stamina": 2 },
+        "successEffects": { "stamina": 10, "intelligence": 10, "sense": 10, "eros": 10, "points": 13 },
+        "failureEffects": { "money": 1000 },
+        "resultText": {
+          "success": "親戚をシバいてパワーアップ！今年はいい年になりそうだ．",
+          "failure": "親戚に返り討ちにあった．1000円だけぶんどって逃げた．"
+        }
+      }
+    ]
+  },
+
+  {
+    "month": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11], "title": "ｵｷﾞｬｵｷﾞｬ！",
+    "description": "おなかがすいた．今日は何を飲もうかな？",
+    "options": [
+      {
+        "text": "ママのおっぱい",
+        "baseRate": 80,
+        "successEffects": { "intelligence": 2, "eros": 1, "points": 1 },
+        "failureEffects": { "stamina": 2, "sense": -1 },
+        "resultText": {
+          "success": "ママのおっぱいんまんま！おっぱい大好き．",
+          "failure": "間違えてパパのおっぱいを飲んでしまった．"
+        }
+      },
+      {
+        "text": "アサヒスーパードライ",
+        "baseRate": 60,
+        "successEffects": { "stamina": 1, "intelligence": 1, "sense": 1, "eros": 1, "points": 1 },
+        "failureEffects": { "intelligence": -1, "sense": 2 },
+        "resultText": {
+          "success": "かーーー！やっぱこれだよなぁ！",
+          "failure": "悪酔いしてしまった．もう酒は飲まねぇ．"
+        }
+      }
+    ]
+  },
+
+  {
+    "month": [13, 16, 19, 22, 26, 29, 32, 35, 39, 42, 45], "title": "お外で遊ぼう！",
+    "description": "お外に遊びに来た．何をして遊ぼうかな？",
+    "options": [
+      {
+        "text": "公園で遊ぶ", "baseRate": 90,
+        "successEffects": { "stamina": 3, "eros": 1, "points": 1 },
+        "failureEffects": { "stamina": 2, "sense": -1 },
+        "resultText": {
+          "success": "遊具で体を動かした！",
+          "failure": "転んでひざを擦りむいた．"
+        }
+      },
+      {
+        "text": "アオカンする", "baseRate": 40,
+        "successEffects": { "stamina": 3, "intelligence": 1, "sense": 1, "eros": 3, "points": 3 },
+        "failureEffects": { "stamina": 2, "sense": -1 },
+        "resultText": {
+          "success": "やっぱ外でするのが一番気持ちいい！",
+          "failure": "警察に見つかって解散．不完全燃焼だ．"
+        }
+      }
+    ]
+  },
+  
+  {
+    "month": [14, 17, 20, 23, 27, 30, 33, 37, 40, 43, 46], "title": "お家で遊ぼう！",
+    "description": "お家で遊ぼう．何をして遊ぼうかな？",
+    "options": [
+      {
+        "text": "ブロックで遊ぶ", "baseRate": 70,
+        "successEffects": { "intelligence": 3, "eros": 1, "points": 1 },
+        "failureEffects": { "intelligence": 2, "stamina": -1 },
+        "resultText": {
+          "success": "かっこいい力作ができた！",
+          "failure": "謎のクソオブジェができあがった．"
+        }
+      },
+      {
+        "text": "オナニーする", "baseRate": 60,
+        "successEffects": { "stamina": 1, "intelligence": 3, "sense": 1, "eros": 3, "points": 3 },
+        "failureEffects": { "intelligence": 2, "stamina": -1 },
+        "resultText": {
+          "success": "いいオナニーができた！賢者に近づいた．",
+          "failure": "オカズ探しに手間取ってるうちにお母さんが来ちゃった．不完全燃焼だ．"
+        }
+      }
+    ]
+  },
+  
+  {
+    "month": [15, 18, 21, 25, 28, 31, 34, 38, 41, 44, 47], "title": "家族で遊ぼう！",
+    "description": "今日は家族でお出かけ！どこに行こう？",
+    "options": [
+      {
+        "text": "遊園地", "baseRate": 60,
+        "successEffects": { "sense": 3, "eros": 1, "points": 1 },
+        "failureEffects": { "intelligence": -1, "sense": 2 },
+        "resultText": {
+          "success": "とびっきりの笑顔で楽しんだ！パパもママもうれしそう．",
+          "failure": "待ち時間のほうが長かった．"
+        }
+      },
+      {
+        "text": "ラブホテル", "baseRate": 50,
+        "successEffects": { "stamina": 1, "intelligence": 1, "sense": 3, "eros": 3, "points": 3 },
+        "failureEffects": { "intelligence": -1, "sense": 2 },
+        "resultText": {
+          "success": "家族で3P！家族愛が深まった．",
+          "failure": "さすがに気まずい．"
+        }
+      }
+    ]
+  }
+
+]

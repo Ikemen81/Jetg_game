@@ -1,0 +1,176 @@
+[
+  {
+    "year": [6], "title": "小学校入学式！",
+    "description": "入学式にめちゃくちゃイイ女がいた！どうしよう？",
+    "options": [
+      {
+        "text": "ナンパする", "baseRate": 70,
+        "successEffects": { "sense": 4, "eros": 1 },
+        "failureEffects": { "sense": -1, "stamina": 2 },
+        "resultText": {
+          "success": "うまくいった！女子小学生「抱いて♡」",
+          "failure": "無視された..."
+        }
+      },
+      {
+        "text": "レイプする", "baseRate": 40,
+        "successEffects": { "stamina": 1, "intelligence": 1, "sense": 4, "eros": 4 },
+        "failureEffects": { "sense": -1, "stamina": 2 },
+        "resultText": {
+          "success": "うまくいった！パンパンパンパン！女子小学生「処女まんこイカされちゃう~///」",
+          "failure": "逆に犯された..."
+        }
+      }
+    ]
+  },
+  
+  {
+    "year": [7], "title": "授業！",
+    "description": "授業だるいな...どうする？",
+    "options": [
+      {
+        "text": "頑張って勉強する", "baseRate": 90,
+        "successEffects": { "intelligence": 5, "eros": 5 },
+        "failureEffects": { "intelligence": -1, "sense": 2 },
+        "resultText": {
+          "success": "子供の作り方を知った！",
+          "failure": "耐え切れずいつの間にか寝ちゃってた．．．"
+        }
+      },
+      {
+        "text": "シコる", "baseRate": 50,
+        "successEffects": { "stamina": 5, "intelligence": 5, "sense": 5, "eros": 5 },
+        "failureEffects": { "intelligence": -1, "sense": 2 },
+        "resultText": {
+          "success": "気持ちー！やっぱ授業よりこれだよな！",
+          "failure": "イク前にばれて怒られた．．．寸止めプレイかよ"
+        }
+      }
+    ]
+  },
+  
+  {
+    "year": [8], "title": "夏休み！",
+    "description": "夏休みだ！何しよう？",
+    "options": [
+      {
+        "text": "家でゲーム", "baseRate": 40,
+        "successEffects": { "sense": 5, "eros": 5 },
+        "failureEffects": { "sense": -1, "stamina": 2 },
+        "resultText": {
+          "success": "やっぱ家でエロゲーしてんのが一番幸せやな！",
+          "failure": "深夜に我に返って絶望した．．．何やってんだ俺"
+        }
+      },
+      {
+        "text": "プールに行く", "baseRate": 60,
+        "successEffects": { "stamina": 5, "intelligence": 5, "sense": 5, "eros": 5 },
+        "failureEffects": { "sense": -1, "stamina": 2 },
+        "resultText": {
+          "success": "マブいギャルと遊んだ！夏サイコー！",
+          "failure": "ひたすら泳ぎ続けた．．．何がおもろいんこれ"
+        }
+      }
+    ]
+  },
+  
+  {
+    "year": [9], "title": "野球しようぜ！",
+    "description": "野球に誘われた！どうする？",
+    "options": [
+      {
+        "text": "やろうぜ！", "baseRate": 80,
+        "successEffects": { "stamina": 5, "eros": 5 },
+        "failureEffects": { "stamina": -1, "intelligence": 2 },
+        "resultText": {
+          "success": "俺の肉棒バットでホームラン！",
+          "failure": "三振の嵐．．．中島「お前帰れよ」"
+        }
+      },
+      {
+        "text": "やらねぇよバーカ！", "baseRate": 40,
+        "successEffects": { "stamina": 5, "intelligence": 5, "sense": 5, "eros": 5 },
+        "failureEffects": { "stamina": -1, "intelligence": 2 },
+        "resultText": {
+          "success": "男は黙って自己研鑽だ！シコシコシコ",
+          "failure": "普通にクラスメイトにリンチされた．．．"
+        }
+      }
+    ]
+  },
+  
+  {
+    "year": [10], "title": "放課後！",
+    "description": "今日もだりー学校が終わった！宿題あるけど．．．何しよ？",
+    "options": [
+      {
+        "text": "宿題やる", "baseRate": 90,
+        "successEffects": { "intelligence": 6, "sense": 1, "eros": 1 },
+        "failureEffects": { "intelligence": -1, "sense": 2 },
+        "resultText": {
+          "success": "漢字ドリルで「膣」を覚えた！",
+          "failure": "わ，わからん．．．"
+        }
+      },
+      {
+        "text": "公園いく", "baseRate": 90,
+        "successEffects": { "stamina": 6, "sense": 1, "eros": 1 },
+        "failureEffects": { "stamina": -1, "sense": 2 },
+        "resultText": {
+          "success": "クラスメイトがいたのでみんなで汗を流した！ハァハァ///",
+          "failure": "だ，誰もおらん..."
+        }
+      }
+    ]
+  },
+  
+  {
+    "year": [11], "title": "卒業式！",
+    "description": "今日で小学校も卒業か．モモコちゃんが好きなんだけど．．．",
+    "options": [
+      {
+        "text": "告白する", "baseRate": 50,
+        "successEffects": { "stamina": 6, "intelligence": 6, "sense": 6, "eros": 6 },
+        "failureEffects": { "sense": 1 },
+        "resultText": {
+          "success": "モモコ「あたしもスキ！ちゅっ♡」むくむくむく．．．",
+          "failure": "ビンタされた．．．親にも殴られたことないのに"
+        }
+      },
+      {
+        "text": "告白しない", "baseRate": 25,
+        "successEffects": { "stamina": 7, "intelligence": 7, "sense": 7, "eros": 7 },
+        "failureEffects": { "sense": 2 },
+        "resultText": {
+          "success": "なんと！モモコ「ずっとスキだったの！ちゅっ♡」むくむくむく．．．",
+          "failure": "切ない．．．"
+        }
+      }
+    ]
+  },
+  
+  {
+    "year": [7], "title": "メリークリスマス！",
+    "description": "サンタさんからプレゼントだ！どっちをあける？",
+    "options": [
+      {
+        "text": "小さいプレゼント", "baseRate": 50,
+        "successEffects": { "stamina": 5, "intelligence": 5, "sense": 5, "eros": 5 },
+        "failureEffects": { "stamina": 1, "intelligence": 1, "sense": 1, "eros": 1 },
+        "resultText": {
+          "success": "金の肉棒だ！やったぜ",
+          "failure": "これは小さいプレゼントじゃなくて小さいチンポ..."
+        }
+      },
+      {
+        "text": "大きいプレゼント", "baseRate": 50,
+        "successEffects": { "stamina": 3, "intelligence": 3, "sense": 3, "eros": 3 },
+        "failureEffects": { "stamina": 2, "intelligence": 2, "sense": 2, "eros": 2 },
+        "resultText": {
+          "success": "巨乳だ！やったぜ",
+          "failure": "大きなおじさんが入ってた..."
+        }
+      }
+    ]
+  }
+]

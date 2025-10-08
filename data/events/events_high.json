@@ -1,0 +1,129 @@
+[
+  {
+    "year": [15], "title": "高校入学！",
+    "description": "友達を作ろう！誰に話しかける？",
+    "options": [
+      {
+        "text": "アキオ", "baseRate": 50,
+        "successEffects": { "stamina": 8, "intelligence": 8, "sense": 8, "eros": 8 },
+        "failureEffects": { "stamina": 2, "intelligence": 2, "sense": 2, "eros": 2 },
+        "resultText": {
+          "success": "おもろいやつで息ピッタリ！アキオ「女におもしれーやついねーからなwww」",
+          "failure": "変なやつで謎のアニメを紹介された．．．エロアニメしか見ないよ"
+        }
+      },
+      {
+        "text": "モモコ", "baseRate": 25,
+        "successEffects": { "stamina": 9, "intelligence": 9, "sense": 9, "eros": 9 },
+        "failureEffects": { "stamina": 1, "intelligence": 1, "sense": 1, "eros": 1 },
+        "resultText": {
+          "success": "めちゃくちゃかわいくて素敵な子だ！恋の予感(シコシコシコ)",
+          "failure": "めちゃくちゃブスで嫌な女．．．性処理ペットにしか使えねーよ"
+        }
+      }
+    ]
+  },
+  
+  {
+    "year": [16], "title": "定期テスト！",
+    "description": "今日はテストだ！わからない問題だ，なんて書く？",
+    "options": [
+      {
+        "text": "オナ・ペニ長", "baseRate": 50,
+        "successEffects": { "intelligence": 9, "eros": 9 },
+        "failureEffects": { "intelligence": -1, "eros": 1 },
+        "resultText": {
+          "success": "先生がムラムラして正解にしてくれた！",
+          "failure": "織田信長だった．．．惜しい"
+        }
+      },
+      {
+        "text": "織田信長", "baseRate": 75,
+        "successEffects": { "stamina": 1, "intelligence": 8, "sense": 1, "eros": 2 },
+        "failureEffects": { "intelligence": 1 },
+        "resultText": {
+          "success": "正解だった！勘が冴えてるぜ",
+          "failure": "不正解だった．．．じゃあオナ・ペニ長って書いとけばよかった"
+        }
+      }
+    ]
+  },
+  
+  {
+    "year": [17], "title": "全国大会！",
+    "description": "甲子園だ！どうする！？",
+    "condition": {"affiliation": "運動部"},
+    "options": [
+      {
+        "text": "チームプレイに貢献する", "baseRate": 50, "rateBoost": {"stamina": 0.1},
+        "successEffects": { "stamina": 9, "intelligence": 1, "sense": 1, "eros": 9 },
+        "failureEffects": { "stamina": 5 },
+        "resultText": {
+          "success": "惜しくも準優勝！悔しいけど全力で戦えたぜ",
+          "failure": "2回戦敗退．．．チームのみんなで涙と精子を流した"
+        }
+      },
+      {
+        "text": "俺様がホームランを決める", "baseRate": 25, "rateBoost": {"stamina": 0.1},
+        "successEffects": { "stamina": 12, "intelligence": 2, "sense": 2, "eros": 12 },
+        "failureEffects": { "stamina": 2 },
+        "resultText": {
+          "success": "大活躍で甲子園優勝！俺がヒーローや",
+          "failure": "初戦敗退．．．狙いすぎて全部三振でチームメイトに嫌われた"
+        }
+      }
+    ]
+  },
+  
+  {
+    "year": [17], "title": "全国大会！",
+    "description": "部活の吹奏楽全国大会だ！どうする！？",
+    "condition": {"affiliation": "文化部"},
+    "options": [
+      {
+        "text": "楽器を吹く", "baseRate": 50, "rateBoost": {"sense": 0.1},
+        "successEffects": { "stamina": 1, "intelligence": 1, "sense": 9, "eros": 9 },
+        "failureEffects": { "sense": 5 },
+        "resultText": {
+          "success": "惜しくも準優勝！悔しいけど全力で戦えたぜ",
+          "failure": "2回戦敗退．．．チームのみんなで涙と精子を流した"
+        }
+      },
+      {
+        "text": "歌を歌う", "baseRate": 25, "rateBoost": {"sense": 0.1},
+        "successEffects": { "stamina": 2, "intelligence": 2, "sense": 12, "eros": 12 },
+        "failureEffects": { "sense": 2 },
+        "resultText": {
+          "success": "型破りなパフォーマンスで全国優勝！俺が歌姫や",
+          "failure": "初戦敗退．．．会場からは大ブーイングだった"
+        }
+      }
+    ]
+  },
+  
+  {
+    "year": [17], "title": "全国大会！",
+    "description": "部活のエロい単語全国大会だ！どうする！？",
+    "condition": {"affiliation": "エロい単語部"},
+    "options": [
+      {
+        "text": "全裸で参加する", "baseRate": 55, "rateBoost": {"eros": 0.1},
+        "successEffects": { "stamina": 1, "intelligence": 1, "sense": 1, "eros": 17 },
+        "failureEffects": { "eros": 9 },
+        "resultText": {
+          "success": "惜しくも準優勝！悔しいけど全力で戦えたぜ",
+          "failure": "2回戦敗退．．．小さなチンチンぶら下げて頑張った"
+        }
+      },
+      {
+        "text": "負けたらオナ禁宣言", "baseRate": 30, "rateBoost": {"eros": 0.1},
+        "successEffects": { "stamina": 2, "intelligence": 2, "sense": 2, "eros": 23 },
+        "failureEffects": { "eros": 5 },
+        "resultText": {
+          "success": "背水の陣で全国優勝！俺がヒーローや",
+          "failure": "初戦敗退．．．明日からオナ禁は絶望すぎる"
+        }
+      }
+    ]
+  }
+]

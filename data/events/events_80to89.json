@@ -1,0 +1,330 @@
+[
+  {
+    "year": [80], "title": "給料日！",
+    "description": "待ちに待った給料日！どうする？",
+    "condition": {"affiliation": "エロい単語学者"},
+    "options": [
+      {
+        "text": "そのままもらう", "baseRate": 75,
+        "successEffects": { "eros": 60, "money": 75 },
+        "failureEffects": { "stamina": -40, "intelligence": -40, "sense": -40, "eros": 100 },
+        "resultText": {
+          "success": "俺様堅実な男！えらい",
+          "failure": "キャバクラでパーッとやったらなくなっちゃった．．．"
+        }
+      },
+      {
+        "text": "競馬で倍にする", "baseRate": 25, "rateBoost": {"eros": 0.03},
+        "successEffects": { "eros": 70, "money": 150 },
+        "failureEffects": { "eros": 20 },
+        "resultText": {
+          "success": "キターーー！金玉モセクロス！",
+          "failure": "外れた．．．明日からもやし生活"
+        }
+      }
+    ]
+  },
+  
+  {
+    "year": [80], "title": "給料日！",
+    "description": "世間では給料日らしい．．．無職の俺はどうする？",
+    "condition": {"affiliation": "無職"},
+    "options": [
+      {
+        "text": "エロい単語を叫ぶ", "baseRate": 10,
+        "successEffects": { "eros": 60, "money": 75, "affiliation": "エロい単語学者" },
+        "failureEffects": { "eros": -30 },
+        "resultText": {
+          "success": "スカウトの耳に入ってエロい単語学者になれた！",
+          "failure": "母ちゃんに激怒された．．．恥ずかしい"
+        }
+      },
+      {
+        "text": "家でゴロゴロしてる", "baseRate": 90,
+        "successEffects": { "eros": 160, "money": 5 },
+        "failureEffects": { "stamina": -40, "intelligence": -40, "sense": -40, "eros": 100 },
+        "resultText": {
+          "success": "母ちゃんが5万円くれた！",
+          "failure": "ニート謳歌！．．．むなしいな"
+        }
+      }
+    ]
+  },
+  
+  {
+    "year": [80], "title": "退職！",
+    "description": "ここまでお仕事頑張った！退職金はどうする？",
+    "options": [
+      {
+        "text": "そのままもらう", "baseRate": 75,
+        "successEffects": { "stamina": 40, "intelligence": 40, "sense": 40, "money": 100, "affiliation": "無職" },
+        "failureEffects": { "stamina": -40, "intelligence": -40, "sense": -40, "affiliation": "無職" },
+        "resultText": {
+          "success": "俺様堅実な男！えらい",
+          "failure": "キャバクラでパーッとやったらなくなっちゃった．．．"
+        }
+      },
+      {
+        "text": "競馬で倍にする", "baseRate": 25, "rateBoost": {"eros": 0.03},
+        "successEffects": { "stamina": 60, "intelligence": 60, "sense": 60, "money": 200, "affiliation": "無職" },
+        "failureEffects": { "stamina": 10, "intelligence": 10, "sense": 10, "affiliation": "無職" },
+        "resultText": {
+          "success": "キターーー！金玉モセクロス！",
+          "failure": "外れた．．．明日からもやし生活"
+        }
+      }
+    ]
+  },
+  
+  {
+    "year": [81], "title": "親孝行！",
+    "description": "子供が家族旅行に連れて行ってくれる！どこに行く？",
+    "options": [
+      {
+        "text": "温泉", "baseRate": 50,
+        "successEffects": { "stamina": 40, "eros": -10 },
+        "failureEffects": { "stamina": -40, "eros": 10 },
+        "resultText": {
+          "success": "家族でゆっくり温泉！気持ちよくて半勃起",
+          "failure": "家族で旅館に泊まったらシコれない．．．チンポが涙を流している"
+        }
+      },
+      {
+        "text": "飛田新地", "baseRate": 0, "rateBoost": {"eros": 0.03},
+        "successEffects": { "stamina": 40, "eros": 40, "money": -10 },
+        "failureEffects": { "stamina": -40, "eros": 10, "money": -10 },
+        "resultText": {
+          "success": "やっぱ旅行と言ったら飛田新地だよな！豪遊",
+          "failure": "レベル高いって聞いてたのに大外れ．．．嫁もキレている"
+        }
+      }
+    ]
+  },
+  
+  {
+    "year": [82], "title": "交通事故！？",
+    "description": "運転してたらトラックが逆走してきた！どうする！？",
+    "options": [
+      {
+        "text": "避ける！", "baseRate": 0, "rateBoost": {"intelligence": 0.03},
+        "successEffects": { "intelligence": 40, "eros": 10 },
+        "failureEffects": { "intelligence": -40, "money": -10 },
+        "resultText": {
+          "success": "ぎりぎりで神回避！射精もこのくらい制御できればいいのに",
+          "failure": "避けた先には対向車が．．．大爆発"
+        }
+      },
+      {
+        "text": "突っ込む！", "baseRate": 0, "rateBoost": {"sense": 0.03},
+        "successEffects": { "sense": 40, "eros": 20 },
+        "failureEffects": { "sense": -40, "eros": 10, "money": -10 },
+        "resultText": {
+          "success": "チンポコがすべて受け止めた！ダテに突っ込んできてないぜ",
+          "failure": "ボカーン！大爆発．．．"
+        }
+      }
+    ]
+  },
+  
+  {
+    "year": [83], "title": "競馬！",
+    "description": "今日は有馬記念！何に賭けよう？",
+    "options": [
+      {
+        "text": "トウカイテイオー(1番人気)", "baseRate": 85,
+        "successEffects": { "money": 320 },
+        "failureEffects": { "money": -64 },
+        "resultText": {
+          "success": "やっぱり強かった！YellowBucks！",
+          "failure": "大番狂わせの亀頭カイテイオー．．．信じられない"
+        }
+      },
+      {
+        "text": "亀頭カイテイオー(18番人気)", "baseRate": 5, "rateBoost": {"eros": 0.03},
+        "successEffects": { "eros": 20, "money": 640 },
+        "failureEffects": { "eros": 10, "money": -64 },
+        "resultText": {
+          "success": "キターーー！！信じていたぜ亀頭カイテイオー！",
+          "failure": "惨敗．．．普通にトウカイテイオーにすりゃよかった"
+        }
+      }
+    ]
+  },
+  
+  {
+    "year": [84], "title": "栗拾い！",
+    "description": "秋の味覚だ！どっちを拾う？",
+    "options": [
+      {
+        "text": "栗", "baseRate": 50, "rateBoost": {"sense": 0.03},
+        "successEffects": { "sense": 50 },
+        "failureEffects": { "sense": -50, "eros": -10 },
+        "resultText": {
+          "success": "甘くておいしい！どことなくエッチな味",
+          "failure": "とげが刺さって血が出た．．．ママに泣きついた"
+        }
+      },
+      {
+        "text": "クリ", "baseRate": 0, "rateBoost": {"eros": 0.03},
+        "successEffects": { "sense": 50, "eros": 20 },
+        "failureEffects": { "sense": -25, "eros": 10 },
+        "resultText": {
+          "success": "これがまさしく絶品！年中ウマイのはクリの方やな",
+          "failure": "持ち帰ったら怒られた．．．嫁「そんなもん返してらっしゃい！」"
+        }
+      }
+    ]
+  },
+  
+  
+  {
+    "year": [85], "title": "無職デスゲーム！",
+    "description": "無職の殺し合いを観戦！誰に賭ける？",
+    "condition": {"affiliation": "エロい単語学者"},
+    "options": [
+      {
+        "text": "無職のおっさん", "baseRate": 50,
+        "successEffects": { "stamina": 30, "intelligence": 30, "sense": 30, "money": 10 },
+        "failureEffects": { "stamina": 10, "intelligence": 10, "eros": -50 },
+        "resultText": {
+          "success": "オッサンの勝利！女は男に勝てない",
+          "failure": "的中の景品にオッサンをもらった．．．いらない"
+        }
+      },
+      {
+        "text": "無職の姉ちゃん", "baseRate": 0, "rateBoost": {"eros": 0.03},
+        "successEffects": { "intelligence": 90, "money": 20 },
+        "failureEffects": { "eros": 10, "money": -5 },
+        "resultText": {
+          "success": "姉ちゃんの勝利！景品で姉ちゃんもGet",
+          "failure": "おっさんに死ぬまでパコられた．．．男最強"
+        }
+      }
+    ]
+  },
+  
+  {
+    "year": [85], "title": "無職デスゲーム！",
+    "description": "無職の殺し合いに強制参加！誰を狙う？",
+    "options": [
+      {
+        "text": "無職のオバハン", "baseRate": 50,
+        "successEffects": { "sense": 100, "money": 50 },
+        "failureEffects": { "sense": -100, "eros": -20 },
+        "resultText": {
+          "success": "ババアをシバいた！ついでに子種も残しておいたぜ",
+          "failure": "ババアに返り討ち．．．なんて無力"
+        }
+      },
+      {
+        "text": "無職の青年", "baseRate": 10, "rateBoost": {"eros": 0.03},
+        "successEffects": { "money": 100 },
+        "failureEffects": { "intelligence": -200 },
+        "resultText": {
+          "success": "あえて強そうなやつに挑んで勝利！俺が最強の無職",
+          "failure": "素直に若さでやられた．．．ケツ穴も持ってかれた"
+        }
+      }
+    ]
+  },
+  
+  {
+    "year": [86], "title": "スキー大好き！",
+    "description": "今日はスキー場に来た！どうする？",
+    "options": [
+      {
+        "text": "滑る", "baseRate": 0, "rateBoost": {"stamina": 0.03},
+        "successEffects": { "intelligence": 10, "stamina": 50 },
+        "failureEffects": { "stamina": -50, "eros": -10 },
+        "resultText": {
+          "success": "スキーで滑りまくった！爽快気持ちよくて半勃起",
+          "failure": "山頂で一発ギャグ．．．大スベり"
+        }
+      },
+      {
+        "text": "ウケる", "baseRate": 50,
+        "successEffects": { "sense": 40, "eros": 20 },
+        "failureEffects": { "sense": -40, "eros": 10 },
+        "resultText": {
+          "success": "山頂で一発ギャグ！スキー場でもスベらないぜ",
+          "failure": "雪山でもスベらない．．．って寒すぎやろ"
+        }
+      }
+    ]
+  },
+
+  {
+    "year": [87], "title": "ゴールデンウィーク!",
+    "description": "今日からGW！誰を抱く？",
+    "options": [
+      {
+        "text": "家で嫁はん", "baseRate": 0, "rateBoost": {"stamina": 0.04},
+        "successEffects": { "stamina": 50, "intelligence": 10, "eros": 20 },
+        "failureEffects": { "stamina": -50 },
+        "resultText": {
+          "success": "正直見てらんないが頑張った！夫婦仲が深まった",
+          "failure": "正直見てらんない．．．チンポが勃たず夫婦仲に亀裂"
+        }
+      },
+      {
+        "text": "外でギャル", "baseRate": 50,
+        "successEffects": { "stamina": 50, "eros": 30 },
+        "failureEffects": { "stamina": -40, "eros": 10 },
+        "resultText": {
+          "success": "やっぱギャル最高！嫁にはない締まり",
+          "failure": "嫁にばれて修羅場．．．80超えて何やってんだ"
+        }
+      }
+    ]
+  },
+  
+  {
+    "year": [88], "title": "誘惑！",
+    "description": "老人ホームのオバに誘われた！どうする？",
+    "options": [
+      {
+        "text": "断る", "baseRate": 0, "rateBoost": {"intelligence": 0.03},
+        "successEffects": { "intelligence": 40, "eros": 10 },
+        "failureEffects": { "intelligence": -40, "eros": -20 },
+        "resultText": {
+          "success": "ハニートラップだった！ババアには騙されないぜ",
+          "failure": "素直な恋心を傷つけてしまった．．．何歳になっても乙女なんやな"
+        }
+      },
+      {
+        "text": "誘いに乗る", "baseRate": 50,
+        "successEffects": { "intelligence": 30, "eros": 30 },
+        "failureEffects": { "intelligence": -50, "eros": 10, "money": 10 },
+        "resultText": {
+          "success": "うおお久々の同級生マンコ効くぜ！たまにはいいな",
+          "failure": "ハニトラだった．．．ババアのくせに生意気な"
+        }
+      }
+    ]
+  },
+  
+  {
+    "year": [89], "title": "お買い物！",
+    "description": "嫁にプレゼントを買おう！どれにする？",
+    "options": [
+      {
+        "text": "ネックレス", "baseRate": 0, "rateBoost": {"eros": 0.03},
+        "successEffects": { "stamina": 20, "intelligence": 20, "sense": 20, "eros": 50, "money": -10 },
+        "failureEffects": { "stamina": 20, "intelligence": 20, "sense": 20, "eros": -100, "money": -10 },
+        "resultText": {
+          "success": "嫁は照れながらも喜んでる！何歳になってもかわいいな",
+          "failure": "電マがほしかったらしい．．．嫁「今更こんなもんいらねーんだよ！」"
+        }
+      },
+      {
+        "text": "電マ", "baseRate": 50,
+        "successEffects": { "stamina": -10, "intelligence": -10, "sense": -10, "eros": 100, "money": -5 },
+        "failureEffects": { "eros": -50, "money": -5 },
+        "resultText": {
+          "success": "渡したとたんにウキウキで使いだした！さすが我が嫁だ",
+          "failure": "ネックレスが欲しかったらしい．．．嫁「乙女心クソも分かってないわね！」"
+        }
+      }
+    ]
+  }
+]
