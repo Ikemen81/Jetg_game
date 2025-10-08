@@ -5,13 +5,13 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebas
 import { getDatabase } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-database.js";
 
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "your-project.firebaseapp.com",
-  databaseURL: "https://your-project.firebaseio.com",
-  projectId: "your-project",
-  storageBucket: "your-project.appspot.com",
-  messagingSenderId: "SENDER_ID",
-  appId: "APP_ID"
+  apiKey: "AIzaSyB4RoOn-ZMaMwuO8HPBinXotS4Vq661Y0I",
+  authDomain: "jetg-game.firebaseapp.com",
+  databaseURL: "https://jetg-game.firebaseio.com",
+  projectId: "jetg-game",
+  storageBucket: "jetg-game.firebasestorage.app",
+  messagingSenderId: "150459389281",
+  appId: "1:150459389281:web:65c7df3459334d538fe120"
 };
 
 // 初期化と同時に db を取得
