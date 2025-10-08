@@ -20,6 +20,7 @@ document.getElementById("register-form").onsubmit = async function(e) {
 
   //const users = getUsers();
   const existingUsernames = await getUsers();
+  console.log("existingUsernames: ", existingUsernames)
   if (existingUsernames.includes(username)) {
     errorMsg.textContent = "このユーザー名は既に使われています。";
     return;
