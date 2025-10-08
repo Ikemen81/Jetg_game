@@ -12,7 +12,7 @@ function getUsers() {
 //20251008 firebase対応
 function saveUser(username, password) {
 //export function saveUser(username, password) {
-  const ref = db.ref(`users/${username}`);
+  const ref = window.db.ref(`users/${username}`);
   ref.set({ password })
     .then(() => {
       console.log("ユーザーを保存しました");
