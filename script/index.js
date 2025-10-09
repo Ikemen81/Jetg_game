@@ -1,9 +1,24 @@
-window.onload = function showCycleRanking() {
-  const users = getUsers();
+window.onload = async function showCycleRanking() {
+  const snapshot = await get(ref(window.db, "characters"));
+  //const users = getUsers();
   const cycle = calculateCycleNumber();
   const ranking = [];
 
-  users.forEach(u => {
+  if (snapshot.exists()) {
+    const characters = snapshot.val();
+
+    Object.entries(characters).forEach(([username, pData]) => {
+      if (pData.joinedCycle === cycle) {
+        ranking.push({
+          username,
+          playerName: pData.name || "名無し",
+          age: pData.age || 0,
+          points: pData.stats?.points ?? 0
+        });
+      }
+    });
+  }
+  /*users.forEach(u => {
     const pdata = loadPlayerData(u.username);
     if (pdata && pdata.joinedCycle === cycle) {
       ranking.push({
@@ -13,12 +28,18 @@ window.onload = function showCycleRanking() {
         points: pdata.stats?.points ?? 0
       });
     }
-  });
+  });*/
 
   ranking.sort((a, b) => b.points - a.points);
 
   const tbody = document.querySelector("#cycle-ranking tbody");
   tbody.innerHTML = "";
+  
+  if (ranking.length === 0) {
+    tbody.innerHTML = `<tr><td colspan="5">該当データなし</td></tr>`;
+    return;
+  }
+
   ranking.slice(0, 5).forEach((r, i) => {
     const tr = document.createElement("tr");
     tr.innerHTML = `
@@ -30,7 +51,7 @@ window.onload = function showCycleRanking() {
     `;
     tbody.appendChild(tr);
   });
-  if (ranking.length === 0) {
+  /*if (ranking.length === 0) {
     tbody.innerHTML = `<tr><td colspan="5">該当データなし</td></tr>`;
-  }
+  }*/
 };

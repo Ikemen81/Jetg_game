@@ -4,6 +4,7 @@ let playerData;
 //const maxYear = 100;
 //const maxYear = 15;
 
+//20251009 不要？
 //2025108 firebase対応
 //20250922 ユーザー名対応
 async function getUsers() {
@@ -43,6 +44,7 @@ const gameConfig = {
   startAffil: "エロい単語学者",
 };
 
+//20251009 不要？
 function loadPlayerData(id) {
   const raw = localStorage.getItem(`player_${id}`);
   return raw ? JSON.parse(raw) : null;
