@@ -223,15 +223,14 @@ function doSingleEvent(playerData) {
 //20251009 playerDataをFirebaseから読み込む
 async function loadPlayerDataFromFirebase(id) {
   const snapshot = await get(ref(window.db, `characters/${id}`));
-  //const snapshot = await get(ref(window.db, `players/${id}`));
   return snapshot.exists() ? snapshot.val() : null;
 }
 
 //20251009 firebase対応
 // ゲーム開始処理
-window.onload = () => {
+window.onload = async () => {
   const id = localStorage.getItem("currentUser");
-  const playerData = loadPlayerDataFromFirebase(id);
+  const playerData = await loadPlayerDataFromFirebase(id);
   //const playerData = loadPlayerData(id);
   
   //ログイン情報がないなら
