@@ -91,7 +91,8 @@ function displayEvent(event, playerData, onComplete) {
       playerData.age = (playerData.age ?? 0) + 1;
 
       const id = localStorage.getItem("currentUser");
-      await set(ref(window.db, `characters/${id}`), playerData);
+      await savePlayerData(id, playerData);
+      //await set(ref(window.db, `characters/${id}`), playerData);
       //savePlayerData(playerData.id, playerData);
 
       // 全ボタンを無効化

@@ -44,15 +44,20 @@ const gameConfig = {
   startAffil: "エロい単語学者",
 };
 
-//20251009 不要？
-function loadPlayerData(id) {
+//20251009 playerDataをFirebaseから読み込む
+async function loadPlayerDataFromFirebase(id) {
+  const snapshot = await get(ref(window.db, `characters/${id}`));
+  return snapshot.exists() ? snapshot.val() : null;
+}
+/*function loadPlayerData(id) {
   const raw = localStorage.getItem(`player_${id}`);
   return raw ? JSON.parse(raw) : null;
-}
+}*/
 
-//20251009 不要？
-function savePlayerData(id, data) {
-  localStorage.setItem(`player_${id}`, JSON.stringify(data));
+//20251010 Firebase対応
+async function savePlayerData(id, playerData) {
+  await set(ref(window.db, `characters/${id}`), playerData);
+  //localStorage.setItem(`player_${id}`, JSON.stringify(data));
 }
 
 // 1分 = 1年として扱う（ゲーム内時間）
