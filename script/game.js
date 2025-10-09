@@ -241,6 +241,8 @@ window.onload = () => {
     return;
   }
   
+  console.log("id:", id);
+  console.log("playerData:", playerData);
   console.log("joinedCycle:", playerData.joinedCycle);
 
   playerData.age = playerData.age ?? 0;

@@ -1,6 +1,5 @@
 window.onload = async function showCycleRanking() {
   const snapshot = await get(ref(window.db, "characters"));
-  //const users = getUsers();
   const cycle = calculateCycleNumber();
   const ranking = [];
 
@@ -18,17 +17,6 @@ window.onload = async function showCycleRanking() {
       }
     });
   }
-  /*users.forEach(u => {
-    const pdata = loadPlayerData(u.username);
-    if (pdata && pdata.joinedCycle === cycle) {
-      ranking.push({
-        username: u.username,
-        playerName: pdata.name || "名無し",
-        age: pdata.localYear || 0,
-        points: pdata.stats?.points ?? 0
-      });
-    }
-  });*/
 
   ranking.sort((a, b) => b.points - a.points);
 
@@ -51,7 +39,4 @@ window.onload = async function showCycleRanking() {
     `;
     tbody.appendChild(tr);
   });
-  /*if (ranking.length === 0) {
-    tbody.innerHTML = `<tr><td colspan="5">該当データなし</td></tr>`;
-  }*/
 };
