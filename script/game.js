@@ -14,6 +14,7 @@ function updateStatusPanel(playerData) {
   const ageDisplay = `<li><strong>${playerData.age}歳</strong></li>`;
   //const ageDisplay = `<li><strong>${playerData.localYear}歳</strong></li>`;
 
+  console.log("playerData.stats:", playerData.stats);
   const statItems = Object.entries(playerData.stats)
     .map(([key, value]) => `<li>${key}: ${value}</li>`)
     .join("");
@@ -90,7 +91,7 @@ function displayEvent(event, playerData, onComplete) {
       playerData.age = (playerData.age ?? 0) + 1;
 
       const id = localStorage.getItem("currentUser");
-      await set(ref(window.db, `players/${id}`), playerData);
+      await set(ref(window.db, `characters/${id}`), playerData);
       //savePlayerData(playerData.id, playerData);
 
       // 全ボタンを無効化
@@ -221,7 +222,8 @@ function doSingleEvent(playerData) {
 
 //20251009 playerDataをFirebaseから読み込む
 async function loadPlayerDataFromFirebase(id) {
-  const snapshot = await get(ref(window.db, `players/${id}`));
+  const snapshot = await get(ref(window.db, `characters/${id}`));
+  //const snapshot = await get(ref(window.db, `players/${id}`));
   return snapshot.exists() ? snapshot.val() : null;
 }
 
