@@ -2,21 +2,23 @@ function randomStat(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function registerPlayer() {
+async function registerPlayer() {
   const name = document.getElementById("player-name").value.trim() || "名無し";
-  const id = localStorage.getItem("currentUser");
-  if (!id) {
+  const username = localStorage.getItem("currentUser");
+  //const id = localStorage.getItem("currentUser");
+  if (!username) {
+  //if (!id) {
     alert("ログインしてから登録してください");
     return;
   }
   
-  const playerKey = `player_${id}`;
+  //const playerKey = `player_${id}`;
 
-  const playerData = {
-    id: id,
+  const characterData = {
+    //id: id,
     name: name,
     joinedCycle: calculateCycleNumber(),
-    localYear: gameConfig.startAge,
+    age: gameConfig.startAge,
     stats: {
       stamina: randomStat(0, 10),
       intelligence: randomStat(0, 10),
@@ -25,11 +27,21 @@ function registerPlayer() {
       money: randomStat(0, 10),
       points: 0
     },
-    affiliations: gameConfig.startAffil
+    affiliation: gameConfig.startAffil
   };
 
-  localStorage.setItem(playerKey, JSON.stringify(playerData));
-  window.location.href = "game.html";
+  const charRef = ref(window.db, `characters/${username}`);
+
+  try {
+      await set(charRef, characterData);
+      window.location.href = "game.html";
+    } catch (error) {
+      console.error("保存エラー:", error);
+      alert("キャラクター登録に失敗しました");
+    }
+
+  //localStorage.setItem(playerKey, JSON.stringify(playerData));
+  //window.location.href = "game.html";
 }
 
 document.getElementById("player-register-form").onsubmit = function(e) {

@@ -14,7 +14,6 @@ async function getUsers() {
     const users = snapshot.val();
     // usernameだけの一覧を抽出
     return Object.keys(users); // → ["seven02"]
-    //return Object.values(users).map(user => user.username);
   } else {
     return []; // ユーザーがいない場合は空配列
   }
@@ -25,9 +24,7 @@ async function getUsers() {
 
 //20251008 firebase対応
 function saveUser(username, password) {
-//export function saveUser(username, password) {
   const ref = window.ref(window.db, `users/${username}`);
-  //const ref = window.db.ref(`users/${username}`);
   set(ref, { password })
     .then(() => {
       console.log("ユーザーを保存しました");
@@ -36,7 +33,6 @@ function saveUser(username, password) {
       console.error("保存エラー:", error);
     });
 }
-
 /*function saveUsers(users) {
   localStorage.setItem("users", JSON.stringify(users));
 }*/
