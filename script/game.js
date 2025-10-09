@@ -8,17 +8,18 @@ function updateCycleTimeDisplay() {
 }
 
 function updateStatusPanel(playerData) {
-  //console.log("Updating status panel with playerData:", playerData);
   document.getElementById("player-name").textContent = `名前：${playerData.name}`;
   const list = document.getElementById("status-list");
 
-  const ageDisplay = `<li><strong>${playerData.localYear}歳</strong></li>`;
+  const ageDisplay = `<li><strong>${playerData.age}歳</strong></li>`;
+  //const ageDisplay = `<li><strong>${playerData.localYear}歳</strong></li>`;
 
   const statItems = Object.entries(playerData.stats)
     .map(([key, value]) => `<li>${key}: ${value}</li>`)
     .join("");
   
-  const affiliation = playerData.affiliations;
+  const affiliation = playerData.affiliation;
+  //const affiliation = playerData.affiliations;
   const affilDisplay = `<li>所属：${affiliation}`;
 
   list.innerHTML = ageDisplay + statItems + affilDisplay;
@@ -27,7 +28,6 @@ function updateStatusPanel(playerData) {
 function calcPointIncrease(prevStats, newStats) {
   const erosDiff = Math.max(0, (newStats.eros || 0) - (prevStats.eros || 0));
   const moneyDiff = Math.max(0, (newStats.money || 0) - (prevStats.money || 0));
-  //return erosDiff * 1 + Math.floor(moneyDiff / 10000);
   return erosDiff + moneyDiff;
 }
 
@@ -53,7 +53,8 @@ function applyOption(option, stats) {
   }
 
   if (effects.affiliation){
-    playerData.affiliations = effects.affiliation;
+    playerData.affiliation = effects.affiliation;
+    //playerData.affiliations = effects.affiliation;
   }
 
   // ポイント加算
@@ -79,15 +80,18 @@ function displayEvent(event, playerData, onComplete) {
   event.options.forEach(option => {
     const button = document.createElement("button");
     button.textContent = option.text;
-    button.onclick = () => {
+    button.onclick = async () => {
       if (optionSelected) return; // ← すでに選択済みなら無視
       optionSelected = true;
 
       const result = applyOption(option, playerData.stats);
       displayResult(result);
       updateStatusPanel(playerData);
-      playerData.localYear = (playerData.localYear ?? 0) + 1;
-      savePlayerData(playerData.id, playerData);
+      playerData.age = (playerData.age ?? 0) + 1;
+
+      const id = localStorage.getItem("currentUser");
+      await set(ref(window.db, `players/${id}`), playerData);
+      //savePlayerData(playerData.id, playerData);
 
       // 全ボタンを無効化
       Array.from(optionsDiv.children).forEach(btn => btn.disabled = true);
@@ -114,7 +118,8 @@ function displayResult(result) {
 function isEventAvailable(event, player) {
   if (!event.condition) return true;
   for (let key in event.condition) {
-    if (player.affiliations !== event.condition[key]) {
+    if (player.affiliation !== event.condition[key]) {
+    //if (player.affiliations !== event.condition[key]) {
       return false;
     }
   }
@@ -131,13 +136,14 @@ function showWaitMessage() {
 
 //実行可能なイベントを一つ抽出
 function getNextEvent(events, playerData) {
-  const localYear = playerData.localYear ?? 0;
+  const localYear = playerData.age ?? 0;
+  //const localYear = playerData.localYear ?? 0;
   const nextEvent = events.find(event =>
     Array.isArray(event.year) &&
     event.year.includes(localYear) &&
     isEventAvailable(event, playerData)
   );
-  console.log("nextEvent:", nextEvent);
+  //console.log("nextEvent:", nextEvent);
   return nextEvent;
 }
 
@@ -163,20 +169,23 @@ function isEnding(playerData) {
     //プレイヤーの参加回が現在サイクルの2つ以上前なら終了処理へ
   const result =  (playerData.joinedCycle < calculateCycleNumber() - 1) ||
     //プレイヤーのlocalYearがMaxYearなら終了処理へ
-         (playerData.localYear > gameConfig.endAge);
+         (playerData.age > gameConfig.endAge);
+         //(playerData.localYear > gameConfig.endAge);
   return result;
 }
 
 //待機条件判定
 function isWaiting(playerData) {
   const result = (playerData.joinedCycle === calculateCycleNumber())
-    && (playerData.localYear - gameConfig.startAge >= get_yearInCycle());
+    && (playerData.age - gameConfig.startAge >= get_yearInCycle());
+    //&& (playerData.localYear - gameConfig.startAge >= get_yearInCycle());
   return result;
 }
 
 //1イベント実行，イベントファイル選び分け対応
 function doSingleEvent(playerData) {
-  const eventFile = getEventFileByAge(playerData.localYear);
+  const eventFile = getEventFileByAge(playerData.age);
+  //const eventFile = getEventFileByAge(playerData.localYear);
   console.log("yearInCycle: ", get_yearInCycle())
   fetch(eventFile)
     .then(response => response.json())
@@ -210,10 +219,18 @@ function doSingleEvent(playerData) {
     });
 }
 
+//20251009 playerDataをFirebaseから読み込む
+async function loadPlayerDataFromFirebase(id) {
+  const snapshot = await get(ref(window.db, `players/${id}`));
+  return snapshot.exists() ? snapshot.val() : null;
+}
+
+//20251009 firebase対応
 // ゲーム開始処理
 window.onload = () => {
   const id = localStorage.getItem("currentUser");
-  const playerData = loadPlayerData(id);
+  const playerData = loadPlayerDataFromFirebase(id);
+  //const playerData = loadPlayerData(id);
   
   //ログイン情報がないなら
   if (!playerData || !id) {
@@ -224,7 +241,8 @@ window.onload = () => {
   
   console.log("joinedCycle:", playerData.joinedCycle);
 
-  playerData.localYear = playerData.localYear ?? 0;
+  playerData.age = playerData.age ?? 0;
+  //playerData.localYear = playerData.localYear ?? 0;
 
   document.getElementById("event-container").style.display = "block";
   document.getElementById("current-cycle-time").style.display = "block";
@@ -240,7 +258,8 @@ window.onload = () => {
       const latestYearInCycle = get_yearInCycle();
       const beforeCycle = (playerData.joinedCycle === calculateCycleNumber() - 1);
       const shouldInCurrentCycle = (playerData.joinedCycle === calculateCycleNumber())
-        && (playerData.localYear - gameConfig.startAge < latestYearInCycle);
+        && (playerData.age - gameConfig.startAge < latestYearInCycle);
+        //&& (playerData.localYear - gameConfig.startAge < latestYearInCycle);
 
       if (beforeCycle || shouldInCurrentCycle) {
         doSingleEvent(playerData);

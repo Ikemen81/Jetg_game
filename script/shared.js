@@ -50,6 +50,7 @@ function loadPlayerData(id) {
   return raw ? JSON.parse(raw) : null;
 }
 
+//20251009 不要？
 function savePlayerData(id, data) {
   localStorage.setItem(`player_${id}`, JSON.stringify(data));
 }
