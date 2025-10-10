@@ -3,7 +3,7 @@ async function getAvailableCycles() {
 
   const cycles = [];
   for (let i = 1; i <= calculateCycleNumber(); i++) {
-  console.log("i: ", i)
+  //console.log("i: ", i)
     const snapshot = await get(ref(window.db, `cycles/${i}`));
     //const key = `ranking_candidates_cycle_${i}`;
     if (snapshot.exists()) {
@@ -13,7 +13,7 @@ async function getAvailableCycles() {
       cycles.push(i);
     }*/
   }
-  console.log("calculateCycleNumber: ", calculateCycleNumber())
+  console.log("calculateCycleNumber: ", calculateCycleNumber());
   //console.log("cycles: ", cycles)
   return cycles;
 }
