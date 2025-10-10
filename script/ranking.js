@@ -48,7 +48,7 @@ async function displayRanking(cycle) {
 window.onload = async () => {
   //console.log("calculateCycleNumber: ", calculateCycleNumber())
   const select = document.getElementById("cycle-select");
-  //console.log("a")
+  console.log("a")
   const cycles = await getAvailableCycles();
   console.log("cycles: ", cycles);
 
