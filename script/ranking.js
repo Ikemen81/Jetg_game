@@ -1,30 +1,40 @@
-function getAvailableCycles() {
+async function getAvailableCycles() {
   const cycles = [];
   for (let i = 1; i <= calculateCycleNumber(); i++) {
-    const key = `ranking_candidates_cycle_${i}`;
-    if (localStorage.getItem(key)) {
+    const snapshot = await get(ref(window.db, `cycles/${i}`));
+    //const key = `ranking_candidates_cycle_${i}`;
+    if (snapshot.exists()) {
       cycles.push(i);
     }
+    /*if (localStorage.getItem(key)) {
+      cycles.push(i);
+    }*/
   }
   console.log("calculateCycleNumber: ", calculateCycleNumber())
-  console.log("cycles: ", cycles)
+  //console.log("cycles: ", cycles)
   return cycles;
 }
 
-function displayRanking(cycle) {
-  const rankingKey = `ranking_candidates_cycle_${cycle}`;
-  const candidates = JSON.parse(localStorage.getItem(rankingKey)) || [];
+async function displayRanking(cycle) {
+  //const rankingKey = `ranking_candidates_cycle_${cycle}`;
+  //const candidates = JSON.parse(localStorage.getItem(rankingKey)) || [];
 
   const title = document.getElementById("ranking-title");
   const list = document.getElementById("ranking-list");
 
   title.textContent = `第${cycle}回ランキング`;
 
-  if (candidates.length === 0) {
+  const snapshot = await get(ref(window.db, `cycles/${cycle}`));
+  if (!snapshot.exists()) {
     list.innerHTML = "<li>このサイクルにはランキング候補がいません。</li>";
     return;
   }
+  /*if (candidates.length === 0) {
+    list.innerHTML = "<li>このサイクルにはランキング候補がいません。</li>";
+    return;
+  }*/
 
+  const candidates = Object.values(snapshot.val());
   candidates.sort((a, b) => b.points - a.points);
 
   list.innerHTML = candidates.map((player, index) => `
@@ -32,9 +42,9 @@ function displayRanking(cycle) {
   `).join("");
 }
 
-window.onload = () => {
+window.onload = async () => {
   const select = document.getElementById("cycle-select");
-  const cycles = getAvailableCycles();
+  const cycles = await getAvailableCycles();
 
   cycles.forEach(cycle => {
     const option = document.createElement("option");
@@ -46,7 +56,7 @@ window.onload = () => {
   // 初期表示は最新サイクル
   const latest = cycles[cycles.length - 1];
   select.value = latest;
-  displayRanking(latest);
+  await displayRanking(latest);
 
   select.onchange = () => {
     const selectedCycle = parseInt(select.value);

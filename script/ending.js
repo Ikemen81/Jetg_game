@@ -37,7 +37,7 @@ window.onload = async () => {
     <strong>獲得ポイント：${playerData.stats.points}</strong><br>
     名前：${playerData.name}<br>
     年齢：${playerData.age}歳<br>
-    所属：${playerData.affiliations}<br>
+    所属：${playerData.affiliation}<br>
     体力：${playerData.stats.stamina}<br>
     知力：${playerData.stats.intelligence}<br>
     センス：${playerData.stats.sense}<br>
