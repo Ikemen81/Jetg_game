@@ -1,21 +1,23 @@
 async function getAvailableCycles() {
-  console.log("b")
+  //console.log("b")
 
-  const cycles = [];
-  for (let i = 1; i <= calculateCycleNumber(); i++) {
+  //const cycles = [];
+  const snapshot = await get(ref(window.db, "cycles"));
+  if (!snapshot.exists()) return [];
+  /*for (let i = 1; i <= calculateCycleNumber(); i++) {
   //console.log("i: ", i)
     const snapshot = await get(ref(window.db, `cycles/${i}`));
     //const key = `ranking_candidates_cycle_${i}`;
     if (snapshot.exists()) {
       cycles.push(i);
     }
-    /*if (localStorage.getItem(key)) {
-      cycles.push(i);
-    }*/
-  }
-  console.log("calculateCycleNumber: ", calculateCycleNumber());
+  }*/
+  const allCycles = snapshot.val();
+  const cycleNumbers = Object.keys(allCycles).map(Number).sort((a, b) => a - b);
+  //console.log("calculateCycleNumber: ", calculateCycleNumber());
   //console.log("cycles: ", cycles)
-  return cycles;
+  return cycleNumbers;
+  //return cycles;
 }
 
 async function displayRanking(cycle) {
